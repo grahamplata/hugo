@@ -1,0 +1,67 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Graham Plata"
+theme = "nyx"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02"
+
+  # Metadata mostly used in document's head
+  description = "Homepage and blog by Graham Plata"
+  keywords = "homepage, blog, ops, development, programming"
+  images = [""]
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "light"
+
+[languages]
+  [languages.en]
+    title = "Graham Plata"
+    subtitle = "A Serial Skill Collector"
+    keywords = ""
+
+    [languages.en.params.logo]
+      logoText = ""
+      logoHomeLink = "/"
+
+  # Social icons
+  [[params.social]]
+    name = "instagram"
+    url  = "https://instagram.com/grahamplata"
+  
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/grahamplata/"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/grahamplata/"
+
+  [[params.social]]
+    name = "keybase"
+    url  = "https://keybase.io/grahamplata"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/grahamplata/"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:graham.plata@gmail.com"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"

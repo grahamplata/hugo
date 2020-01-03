@@ -1,0 +1,5 @@
+# MAC OS X
+.DS_STORE
+
+# Ignore Build folder
+public/
