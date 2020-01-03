@@ -1,0 +1,3 @@
+[submodule "themes/nyx"]
+	path = themes/nyx
+	url = https://github.com/grahamplata/nyx.git
