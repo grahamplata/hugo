@@ -3,5 +3,4 @@
 ## Built With
 
 - [Hugo](https://gohugo.io/) - The world’s fastest framework for building websites
-- [Terraform](https://www.terraform.io/) - Infrastructure as Code
-- [AWS](https://aws.amazon.com/) - Amazon Web Services
+- [Zeit Now](https://zeit.co/) - ZEIT Now is a cloud platform for static sites and Serverless Functions. 
