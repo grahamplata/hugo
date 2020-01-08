@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/grahamplata
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://grahamplata.com
+  * I am grahamplata (https://keybase.io/grahamplata) on keybase.
+  * I have a public key ASCyZgm6FGUg6-0CHzjcmnD_lrFIw6N-ckdyavq78Vfd2Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b26609ba146520ebed021f38dc9a70ff96b148c3a37e7247726afabbf157ddd90a",
+      "host": "keybase.io",
+      "kid": "0120b26609ba146520ebed021f38dc9a70ff96b148c3a37e7247726afabbf157ddd90a",
+      "uid": "b05f4ac14431d0fb50cee22522ba1c19",
+      "username": "grahamplata"
+    },
+    "merkle_root": {
+      "ctime": 1550187388,
+      "hash": "bf8caac695dff9a664a86c53ade7a0b8b5bb18caf79160e8cabec7545b01d7b0f78fd4c2a154ca1d422624f394441bf3f42e7668dc6d57be67ede2c1e7858694",
+      "hash_meta": "99a07c1ee8dda05ba34fa8e1e98f9c405e5df7467fb5fb4834a4e7c09ed0e203",
+      "seqno": 4767820
+    },
+    "service": {
+      "entropy": "ag9ye4hlz7GsphkoVey7tj14",
+      "hostname": "grahamplata.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.0.0"
+  },
+  "ctime": 1550187390,
+  "expire_in": 504576000,
+  "prev": "397424f1ebab2d13149727e1fcd74fdd4055b79fb4f7c05b6d9218e59e59fbf0",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgsmYJuhRlIOvtAh843Jpw/5axSMOjfnJHcmr6u/FX3dkKp3BheWxvYWTESpcCCcQgOXQk8eurLRMUlyfh/NdP3UBVt5+098BbbZIY5Z5Z+/DEINlaIaxvnW9ycGKNUL/Nn92zH83x9xTjztL1FLUskYjVAgHCo3NpZ8RAlYHiOTPGmBUtWIaQQnrrmPZOs6c5Xa7ybk8EZNo2zHeYxDM1ehYmNVJKcbzpYFuV4/eYIXkprtnVjnA7I2LHA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAbrIQNjj4U7A6Gc0wcHjdS1W+ED4bwt/XXGVLHnTzx/o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/grahamplata
+
+==================================================================
