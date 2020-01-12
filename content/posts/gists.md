@@ -249,53 +249,21 @@ kubectl exec -it -n <NAMESPACE> <POD> -c -c rabbitmq-ha -- bash -c "cd /var/lib/
 
 # Install Python 3 on Raspbian
 
-> Installing Python 3.7.2 on Raspberry Pi running raspbian on it.
-
-### Update the Raspbian before installing python.
+> Installing Python 3.7.4 on Raspberry Pi running raspbian on it.
 
 ```bash
-sudo apt-get update
-```
-
-### Update and install required dependencies
-
-```bash
-sudo apt-get install -y build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev tar wget vim
-```
-
-### Download Python
-
-```bash
-wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
-```
-
-### Extract and install Python from the source.
-
-```bash
-sudo tar zxf Python-3.7.2.tgz
-cd Python-3.7.2
-sudo ./configure --enable-optimizations
-sudo make -j 4
+sudo apt-get update -y
+sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
+wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
+tar xf Python-3.7.4.tar.xz
+cd Python-3.7.4
+./configure
+make -j 4
 sudo make altinstall
-```
-
-### Check Python version
-
-```bash
-python3.7 -V
-```
-
-### Make Python 3.X as the default version
-
-```bash
-echo "/usr/bin/python3.7" >> .bashrc
-echo "alias python='/usr/bin/python3.7'" >> .bashrc
-source ~/.bashrc
-```
-
-### Verify Python Version
-
-```bash
-python -V
-Python 3.7.2
+cd ..
+sudo rm -r Python-3.4.0
+rm Python-3.7.4.tar.xz
+sudo apt-get --purge remove build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
+sudo apt-get autoremove -y
+sudo apt-get clean
 ```
