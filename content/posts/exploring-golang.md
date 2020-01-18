@@ -14,7 +14,18 @@ A goal of the past year for me was to become more familiar with go lang.
 
 > Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
 
-A simple cli for following my favorite NBA team
+[A simple cli](https://github.com/grahamplata/sixers/releases) for following my favorite NBA team.
+The goal of the following is to learn the language and actually use what I create.s
+
+I would love a simple interface to follow my favorite team.
+
+---
+
+> Powered by
+>
+> - [Cobra](https://github.com/spf13/cobra) Modern Go CLI interactions
+> - [Spinner](https://github.com/briandowns/spinner) Configurable terminal spinner/progress indicators.
+> - [Aurora](https://github.com/logrusorgru/aurora) Golang ultimate ANSI-colors that supports Printf/Sprintf methods
 
 ```shell
 Usage:
