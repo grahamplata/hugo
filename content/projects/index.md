@@ -7,6 +7,8 @@ author: Graham Plata
 
 ## Personal Projects
 
+Bump
+
 ## Hardware Projects
 
 - **[Weather Buddy](https://github.com/grahamplata/weatherbuddy)** -
