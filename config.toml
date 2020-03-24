@@ -1,10 +1,8 @@
 [module]
-
   [[module.imports]]
     disable = false
     ignoreConfig = false
     path = "github.com/grahamplata/nyx
-
   [[module.imports]]
     path = "nyx"
 
