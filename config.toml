@@ -1,3 +1,13 @@
+[module]
+
+  [[module.imports]]
+    disable = false
+    ignoreConfig = false
+    path = "github.com/grahamplata/nyx
+
+  [[module.imports]]
+    path = "nyx"
+
 baseURL = "/"
 languageCode = "en-us"
 title = "Graham Plata"
