@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-display: auto;
+
+  img {
+    height: 44px;
+  }
+
+  &__mark {
+    margin-right: 5px;
+  }
+
+  &__text {
+    font-size: 1.125rem;
+  }
+
+}
