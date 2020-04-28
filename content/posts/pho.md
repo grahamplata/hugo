@@ -70,7 +70,7 @@ Optional
 - **Roast the bones and onions**
   - Roasting the beef bones and onions will unlock a lot more flavor
   - Preheat oven to 425 degrees F
-  - Place beef bones and onions on baking sheets and roast until they develop some color
+  - Place beef bones and onions on baking sheets and roast until they develop color
 - **Making the broth**
   - Place the bones, quartered onion, cinnamon, halved ginger, salt, star anise, and fish sauce in a large stockpot or crockpot and cover with water until it is about 2 inches from the top.
   - It helps when straining to put the spices in a teaball or muslin pouch.
@@ -100,7 +100,3 @@ I have had good results with the slow cooker in smaller batches.
 ## Inspired By
 
 - [Adam Tran](https://www.instagram.com/aviettran)
-
-terraform
-bootstrap
-eng team integration
