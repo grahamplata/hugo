@@ -47,7 +47,7 @@ Noodles
 
 Meat
 
-- **1/2 lb.** Raw top sirloin roast
+- **1/2 lb.** Flank Steak
 
 Veggies
 
