@@ -9,9 +9,9 @@ author: Graham Plata
 
 > Currently, I reside in Phoenixville, Pennsylvania solving interesting problems as a **Site Reliability Engineer** for **[SYAPSE](https://www.syapse.com/)**.
 
-### What skills would you like to learn in 2019?
+### What skills would you like to learn in 2020?
 
-> - **Kubernetes** - Kubernetes is an open-source container-orchestration system for automating application deployment, scaling, and management.
+> - **Get the CKAD** - A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
 > - **Welding** - I want to restore and work on cars eventually.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
 
