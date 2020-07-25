@@ -11,7 +11,9 @@ author: Graham Plata
 
 ### What skills would you like to learn in 2020?
 
-> - **Get the CKAD** - A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
+> - **~~Get the CKAD~~** - A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
+>   - `Completed: 07/18/20`
+>   - `Certificate ID: LF-9h1213ot0g`
 > - **Welding** - I want to restore and work on cars eventually.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
 
