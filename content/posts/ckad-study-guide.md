@@ -21,7 +21,7 @@ In the following post I document my process in preparing for the CKAD exam.
 
 ## Context
 
-**_[Certified Kubernetes Application Developer "CKAD"](https://www.cncf.io/certification/ckad/)_** A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
+**_[Certified Kubernetes Application Developer or "CKAD"](https://www.cncf.io/certification/ckad/)_** A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
 
 ## My Objectives
 
@@ -57,7 +57,7 @@ In the following post I document my process in preparing for the CKAD exam.
 
 #### Tmux or Screen
 
-> I didn't feel a need.
+> I didn't feel a need to use any terminal multiplexers.
 
 ## The Exam
 
@@ -66,14 +66,14 @@ In the following post I document my process in preparing for the CKAD exam.
 - If you use any extra tools in your day job to make your life easier ([kubens](https://github.com/ahmetb/kubectx)) be mindful that they will not be available on test day.
 - Make use of the provided cheatsheet in the [k8s docs](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 - Proactively make bookmarks when studying to use on exam day. Just make sure to only use one additional tab.
-- Setup Autocompletion
+- Use Autocompletion
 
   - ```shell
     source <(kubectl completion bash)
     echo "source <(kubectl completion bash)" >> ~/.bashrc
     ```
 
-- Set kubectl Alias to k
+- Alias kubectl to k
 
   - ```shell
     alias k=kubectl
