@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Graham Plata"
 theme = "nyx"
+googleAnalytics = "UA-11254643-2"
 
 [params]
   dateform        = "Jan 2, 2006"
