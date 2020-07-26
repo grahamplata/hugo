@@ -6,7 +6,7 @@ excert: "A guide to help with my preperation for the CKAD exam."
 tags: ["k8s", "exam", "ckad"]
 ---
 
-In the following post I document my process in preparing for the CKAD exam.
+In the following post I share my thoughts and resources I used in preperation for the CKAD exam.
 
 ## Table of Contents
 
@@ -23,6 +23,10 @@ In the following post I document my process in preparing for the CKAD exam.
 
 **_[Certified Kubernetes Application Developer or "CKAD"](https://www.cncf.io/certification/ckad/)_** A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
 
+**Why did you pursue this certification?**
+
+I pursued this certification because my team at work supports micro service applications via Kubernetes and I felt that this was a logical move. My thought process was that this would be a great way to validate my skill and pass on what I have learned to others.
+
 ## My Objectives
 
 - Pass the exam!
@@ -35,17 +39,17 @@ In the following post I document my process in preparing for the CKAD exam.
 
 #### Certified Kubernetes Application Developer Udemy Course
 
-> I began my studies with this [Udemy course](https://www.udemy.com/course/certified-kubernetes-application-developer/) taught by Mumshad Mannambeth. His course stepped through all concepts that are covered by the current exam. A nice bonus is that there are labs that accompany each lesson and two practice exams.
+> I started my studies with this [Udemy course](https://www.udemy.com/course/certified-kubernetes-application-developer/) taught by Mumshad Mannambeth. His course stepped through all concepts that are covered by the current exam. A nice bonus is that there are labs that accompany each lesson and two practice exams.
 
 #### [dgkanatsios' Study Guide](https://github.com/dgkanatsios/CKAD-exercises)
 
-> A set of exercises to prepare for Certified Kubernetes Application Developer exam by Cloud Native Computing Foundation. Available on [github](https://github.com/dgkanatsios/CKAD-exercises)
+> Dgkanatsios prepared a set of exercises to prepare for Certified Kubernetes Application Developer exam. Available on [github](https://github.com/dgkanatsios/CKAD-exercises)
 
 ### Tools
 
 #### [Killer.sh](Killer.sh)
 
-> A test environment built to be close to the real exam. The CKAD Simulator came with 20 scenarios that you solve in the same 2 hours as the real one. After time expires you will get access to the solutions and an automated score.
+> A test environment built to mimic the real exam. The CKAD Simulator came with 20 scenarios in which you attempt solve in the same 2 hours. When time expires you get access to the solutions and an automated score.
 
 #### [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
@@ -87,13 +91,13 @@ In the following post I document my process in preparing for the CKAD exam.
 
 ### Exam Day
 
-Make sure you read the [instructions](https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad)
+Make sure you read the [instructions!](https://docs.linuxfoundation.org/tc-docs/certification/tips-cka-and-ckad)
 
 The test...
 
-- The exams are delivered online and consist of performance-based tasks solved in the command line running Linux.
-- The exams consist of 20 tasks.
-- Candidates have 2 hours to complete the exam.
+- The CKAD is 20 questions with tasks.
+- You have 2 hours to complete the exam.
+- Tasks are solved in the command line on Linux.
 - The exams are proctored via streaming audio, video, and screen sharing feeds.
 - Results will be emailed 36 hours from the time that the exam is completed.
 
