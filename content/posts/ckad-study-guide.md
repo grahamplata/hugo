@@ -55,6 +55,12 @@ I pursued this certification because my team at work supports micro service appl
 
 > minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes. This works great with free resources like [dgkanatsios' Study Guide](https://github.com/dgkanatsios/CKAD-exercises) linked above.
 
+```shell
+# mac users who get stuck on docker/virtualbox
+brew install virtualbox
+minikube start --vm-driver virtualbox
+```
+
 #### Vim
 
 > Know enough Vim or nano to get by. My daily driver is Vscode so I had to put in some extra effort and brush up. Knowing to select, delete and copy quickly will help speed up your efficiency.
