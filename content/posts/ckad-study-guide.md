@@ -13,7 +13,6 @@ In the following post I share my thoughts and resources I used in preperation fo
 1. [Context](#context)
 2. [My Objectives](#my-objectives)
 3. [Practice tools and Study Guides](#practice-tools-and-study-guides)
-   - [Base Concepts](#base-concepts)
    - [Tools](#tools)
 4. [The Exam](#the-exam)
    - [Tips](#tips)
@@ -21,11 +20,13 @@ In the following post I share my thoughts and resources I used in preperation fo
 
 ## Context
 
-**_[Certified Kubernetes Application Developer or "CKAD"](https://www.cncf.io/certification/ckad/)_** A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
+**_[Certified Kubernetes Application Developer or "CKAD"](https://www.cncf.io/certification/ckad/)_**
+
+A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
 
 **Why did you pursue this certification?**
 
-I pursued this certification because my team at work supports micro service applications via Kubernetes and I felt that this was a logical move. My thought process was that this would be a great way to validate my skill and pass on what I have learned to others.
+I pursued this certification because Syapse switched to a microservices architecture at using Kubernetes. My thought process was that this would be a great way to validate my skills learned over the past two years during the migration.
 
 ## My Objectives
 
@@ -35,47 +36,55 @@ I pursued this certification because my team at work supports micro service appl
 
 ## Practice tools and Study Guides
 
-### Base Concepts
+- Certified Kubernetes Application Developer Udemy Course
 
-#### Certified Kubernetes Application Developer Udemy Course
+  - I started my studies with this [Udemy course](https://www.udemy.com/course/certified-kubernetes-application-developer/) taught by Mumshad Mannambeth. His course stepped through all concepts that are covered by the current exam. A nice bonus is that there are labs that accompany each lesson and two practice exams.
 
-> I started my studies with this [Udemy course](https://www.udemy.com/course/certified-kubernetes-application-developer/) taught by Mumshad Mannambeth. His course stepped through all concepts that are covered by the current exam. A nice bonus is that there are labs that accompany each lesson and two practice exams.
+- dgkanatsios' Study Guide
 
-#### [dgkanatsios' Study Guide](https://github.com/dgkanatsios/CKAD-exercises)
-
-> Dgkanatsios prepared a set of exercises to prepare for Certified Kubernetes Application Developer exam. Available on [github](https://github.com/dgkanatsios/CKAD-exercises)
+  - Dgkanatsios prepared a set of exercises to prepare for Certified Kubernetes Application Developer exam.
+  - [Github link](https://github.com/dgkanatsios/CKAD-exercises)
 
 ### Tools
 
-#### [Killer.sh](Killer.sh)
+- [Killer.sh](Killer.sh)
 
-> A test environment built to mimic the real exam. The CKAD Simulator came with 20 scenarios in which you attempt solve in the same 2 hours. When time expires you get access to the solutions and an automated score.
+  - A test environment built to mimic the real exam. The CKAD Simulator came with 20 scenarios in which you attempt solve in the same 2 hours. When time expires you get access to the solutions and an automated score.
 
-#### [minikube](https://minikube.sigs.k8s.io/docs/start/)
+- [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
-> minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes. This works great with free resources like [dgkanatsios' Study Guide](https://github.com/dgkanatsios/CKAD-exercises) linked above.
+  - minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes. This works great with free resources like [dgkanatsios' Study Guide](https://github.com/dgkanatsios/CKAD-exercises) linked above.
 
-```shell
-# mac users who get stuck on docker/virtualbox
-brew install virtualbox
-minikube start --vm-driver virtualbox
-```
+  - ```shell
+    # mac users who get stuck on docker/virtualbox
+    brew install virtualbox
+    minikube start --vm-driver virtualbox
+    ```
 
-#### Vim
-
-> Know enough Vim or nano to get by. My daily driver is Vscode so I had to put in some extra effort and brush up. Knowing to select, delete and copy quickly will help speed up your efficiency.
-
-#### Tmux or Screen
-
-> I didn't feel a need to use any terminal multiplexers.
+- Know enough Vim to get by
+  - Knowing to select, delete and copy quickly will help speed up your efficiency.
+  - `h j k l` or `arrow keys` movement
+  - `i` enter insert mode
+  - `dd` delete current line
+  - `u` undo last action
+  - `Ctrl + r` redo last action
+  - `p` delete current line
+  - `v` visually select multiple lines
+  - `y` yank/copy
+  - `:set number` Adds numbers to the gutter
+  - `:wq` save and quit
 
 ## The Exam
+
+### Question Format
+
+> In the namespace yellow there is a deployment named webapp. Team Yellow needs it to be more reliable. Please add a liveness-probe which checks the container on port 80. Instruct the probe to wait 10 seconds before probing and periodically check every 15 seconds. The original deployment yaml is available at /webapp.yaml. Save your changes at /answer/wabapp-new.yaml.
 
 ### Tips
 
 - If you use any extra tools in your day job to make your life easier ([kubens](https://github.com/ahmetb/kubectx)) be mindful that they will not be available on test day.
-- Make use of the provided cheatsheet in the [k8s docs](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 - Proactively make bookmarks when studying to use on exam day. Just make sure to only use one additional tab.
+- Make use of the provided cheatsheet in the [k8s docs](https://kubernetes.io/docs/reference/kubectl/cheatsheet/).
 - Use Autocompletion
 
   - ```shell
