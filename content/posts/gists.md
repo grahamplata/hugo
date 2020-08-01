@@ -6,16 +6,7 @@ excert: "Helpful gists"
 tags: ["gists"]
 ---
 
-## Table of Contents
-
-1. [Proxy an api to a local React App](#proxy-react-app)
-2. [Resize an Amazon EC2](#resize-ec2-root-volume)
-3. [Installing R Packages from GitHub](#install-r-packages)
-4. [Containerize Gatsby](#containerize-gatsby)
-5. [Recover RabbitMQ from "Waiting for Mnesia tables" state](#rabbitmq-recovery-from-mnesia-tables)
-6. [Install Python 3 on Raspbian](#install-python-3-on-raspbian)
-
-# Proxy React App
+## Proxy React App
 
 Quickly Proxy a React App to a local api
 
@@ -57,7 +48,7 @@ axios.get("/example");
 fetch("/example");
 ```
 
-# Resize EC2 Root Volume
+## Resize EC2 Root Volume
 
 - Power down services
   - Disable anything that has a + or is listed as start/running with the appropriate commands.
@@ -97,7 +88,7 @@ fetch("/example");
 
 ---
 
-# Install R Packages
+## Install R Packages
 
 - R Studio
 - GitHub and a Personal Access Token
@@ -186,46 +177,15 @@ install_github(repo="username/package", ref="develop", auth_token=Sys.getenv("GI
 - [devtools](https://github.com/r-lib/devtools/) - Tools to make an R developer's life easier
 - [github docs](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) - Creating a personal access token for the command line
 
-# Containerize Gatsby
+## RabbitMQ Recovery from Mnesia Tables
 
-```docker
-# Stage 1, Build and compile the site
-# Pull the latest node js image
-FROM node:latest as build-stage
-# Set a working directory
-WORKDIR /app
-# Copy the node dependenices needed to compile the website
-COPY package*.json /app/
-# Install the Gatsby Command Line Intereface
-RUN npm install --global gatsby-cli
-# Install the production dependencies
-RUN npm install --production
-# Copy the project to the pod
-COPY ./ /app/
-# Build the static Website
-RUN gatsby build
-
-# Stage 2, Copy compiled site for production to Nginx
-# Pull the latest stable nginx image
-FROM nginx:stable
-# Move the completed build to the nginx Image
-COPY --from=build-stage /app/public /var/www
-# Copy the Nginx configuration to the nginx Image
-COPY --from=build-stage /app/nginx.conf /etc/nginx/nginx.conf
-# Expose port 80
-EXPOSE 80
-ENTRYPOINT ["nginx","-g","daemon off;"]
-```
-
-# RabbitMQ Recovery from Mnesia Tables
-
-## Cause:
+### Cause
 
 An unexpected shutdown caused RabbitMQ node(s) to get stuck in a "Waiting for Mnesia tables" state.
 
-## Fixes:
+### Fixes
 
-### Node:
+#### Node
 
 Stop rabbit and force boot
 
@@ -233,7 +193,7 @@ Stop rabbit and force boot
 rabbitmqctl stop_app && rabbitmqctl force_boot
 ```
 
-### K8s:
+#### K8s
 
 Stop rabbit and force boot
 
@@ -247,23 +207,59 @@ Force a reload
 kubectl exec -it -n <NAMESPACE> <POD> -c -c rabbitmq-ha -- bash -c "cd /var/lib/rabbitmq/mnesia/rabbit@rabbitmq-ha.rabbitmq-ha-discovery.rabbit.svc.cluster.local && touch force_load && chown rabbitmq: force_load"
 ```
 
-# Install Python 3 on Raspbian
+## ETCD Cluster back and restore
 
-> Installing Python 3.7.4 on Raspberry Pi running raspbian on it.
+[etcd](https://github.com/etcd-io/etcd) is a consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 
-```bash
-sudo apt-get update -y
-sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
-wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
-tar xf Python-3.7.4.tar.xz
-cd Python-3.7.4
-./configure
-make -j 4
-sudo make altinstall
-cd ..
-sudo rm -r Python-3.4.0
-rm Python-3.7.4.tar.xz
-sudo apt-get --purge remove build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
-sudo apt-get autoremove -y
-sudo apt-get clean
+Check the pod configuration with kubectl
+
+- `kubectl get pods` locate the etcd pod
+- `kubectl describe pod/etcd-pod` describe the pod
+- Look for the command field. This will contain the cluster configuration.
+
+```shell
+command:
+- |
+  exec etcd --name ${HOSTNAME} \
+    --listen-peer-urls http://127.0.0.1:2380 \
+    --listen-client-urls http://127.0.0.1:2379 \
+    --advertise-client-urls http://127.0.0.1.etcd:2379 \
+    --initial-advertise-peer-urls http://127.0.0.1:2380 \
+    --initial-cluster-token etcd-cluster-1 \
+    --initial-cluster-state new \
+    --data-dir /var/run/etcd/default.etcd
+```
+
+### Locating etcd configuration
+
+```shell
+# declare an api version as env var
+export ETCDCTL_API=3
+```
+
+### Backup
+
+```shell
+# backup etcd with the etcdctl tool
+etcdctl --endpoints=https://ip-of-master:2379 \
+  --key=/path/to/server.key \
+  --cacert=/path/to/ca.crt \
+  --cert=/path/to/server.crt \
+  snapshot save /path/to/snapshot.db
+```
+
+### Restore
+
+```shell
+# restore etcd with the etcdctl tool
+ETCDCTL_API=3 etcdctl --endpoints=https://ip-of-master:2379
+  --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+  --name=master \
+  --cert=/etc/kubernetes/pki/etcd/server.crt \
+  --key=/etc/kubernetes/pki/etcd/server.key \
+  --data-dir /var/lib/etcd-from-backup \
+  --initial-cluster=master=https://127.0.0.1:2380 \
+  --initial-cluster-token=etcd-cluster-1 \
+  --initial-advertise-peer-urls=https://127.0.0.1:2380 \
+  snapshot restore /tmp/snapshot-pre-boot.db
 ```
