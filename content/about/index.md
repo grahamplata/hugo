@@ -14,6 +14,9 @@ author: Graham Plata
 > - **~~Get the CKAD~~** - A certification from the Cloud Native Computing Foundation (CNCF), which validates that users can design, build, configure, and expose cloud native applications for Kubernetes.
 >   - `Completed: 07/18/20`
 >   - `Certificate ID: LF-9h1213ot0g`
+> - **~~Get the CKA~~** - Certified Kubernetes Administrator (CKA) program is to provide assurance that CKAs have the skills, knowledge, and competency to perform the responsibilities of Kubernetes administrators..
+>   - `Completed: 09/8/20`
+>   - `Certificate ID: LF-x1z12zbxk0`
 > - **Welding** - I want to restore and work on cars eventually.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
 
