@@ -9,6 +9,9 @@ author: Graham Plata
 
 ### Software Projects
 
+- **[GO Sixers](https://github.com/grahamplata/sixers/)** - _A cli tool to get past and future statistics about the
+  Philadelphia 76ers basketball team._
+  - Learning more about the GO language.
 - **[SNAP GMP](https://www.atlasgxp.com/)** - _A manufacturing workflow compliance SAAS project._
   - I currently contribute to the Cloud and Infrastructure speacializing in Kubernetes and Monitoring
 - **[RGB LAN](https://www.rgblan.org/)** - _A three-day, LAN party and charity video game tournament_
