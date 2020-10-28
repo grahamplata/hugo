@@ -5,10 +5,11 @@ draft: false
 author: Graham Plata
 ---
 
-## Projects I contribute to
+## Projects
 
 ### Software Projects
 
+- **[Roku Remote](https://github.com/grahamplata/roku-remote/)** - _A cli to manage and interact with Roku devices on your local network._
 - **[GO Sixers](https://github.com/grahamplata/sixers/)** - _A cli tool to get past and future statistics about the
   Philadelphia 76ers basketball team._
   - Learning more about the GO language.
