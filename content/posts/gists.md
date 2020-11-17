@@ -6,6 +6,24 @@ excert: "Helpful gists"
 tags: ["gists"]
 ---
 
+## Setup wireless over ssh
+
+Take the headace out of wireless setup over ssh with:
+
+[*nmtui*](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/networking_guide/sec-configuring_ip_networking_with_nmtui) is a TUI (terminal user interface) application for interacting with NetworkManager.
+
+```shell
+$ nmtui
+
+# Show a connection editor that supports adding, modifying, viewing and deleting connections. It provides similar functionality as nm-connection-editor.
+edit
+# Show a list of available connections, with the option to activate or deactivate them. It provides similar functionality as nm-applet.
+connect
+# Set the system hostname.
+hostname
+```
+
+
 ## Proxy React App
 
 Quickly Proxy a React App to a local api
