@@ -11,7 +11,7 @@ author: Graham Plata
 
 ### What skills would you like to learn in 2020?
 
-> - **Snowflake** - A cloud-based database.
+> - **Snowflake** - Cloud data warehousing.
 > - **Welding** - I want to restore and work on cars eventually.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
 
