@@ -13,7 +13,6 @@ author: Graham Plata
   - Learning more about the GO language and External Control Protocol.
 - **[GO Sixers](https://github.com/grahamplata/sixers/)** - _A cli tool to get past and future statistics about the
   Philadelphia 76ers basketball team._
-  - Learning more about the GO language.
 - **[SNAP GMP](https://www.atlasgxp.com/)** - _A manufacturing workflow compliance SAAS project._
   - Contributes to the Cloud and Infrastructure speacializing in Kubernetes and Monitoring
 - **[RGB LAN](https://www.rgblan.org/)** - _A three-day, LAN party and charity video game tournament_
