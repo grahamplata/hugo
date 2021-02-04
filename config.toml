@@ -11,7 +11,7 @@ googleAnalytics = "UA-11254643-2"
   dateformNumTime = "2006-01-02"
 
   # Metadata mostly used in document's head
-  description = "Homepage and blog by Graham Plata"
+  description = "Homepage and blog for Graham Plata"
   keywords = "homepage, blog, ops, development, programming"
   images = [""]
 

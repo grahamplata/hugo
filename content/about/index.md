@@ -7,7 +7,9 @@ author: Graham Plata
 
 ### Where are you currently?
 
-> Currently, I reside in Phoenixville, Pennsylvania solving interesting problems as a **Site Reliability Engineer** for **[SYAPSE](https://www.syapse.com/)**.
+> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **DevOps Engineer** for **[FacetData](https://www.facetdata.com/)**.
+
+<sub>[We're Hiring](https://angel.co/company/facet-data/jobs), Feel free to drop me a line.</sub>
 
 ### What skills would you like to learn in 2020?
 
