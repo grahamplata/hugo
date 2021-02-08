@@ -20,6 +20,9 @@ author: Graham Plata
 
 ### Hardware Projects
 
+- **[Raspberry Pi Cluster](https://github.com/grahamplata/kubernetes-homelab)** - _A small but **mighty** cluster compute solution._
+  - Exploring the ARM ecosystem of kubernetes (k3s).
+    - [Raspberry Pi 4 4GB](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) A tiny but powerful arm computer board.
 - **[Weather Buddy](https://github.com/grahamplata/weatherbuddy)** - _A weather interface for the coffee table._
   - Learning a bit about internet connected microcontrollers.
     - [Particle Photon](https://store.particle.io/products/photon) A tiny Wi-Fi IoT device it's like an Arduino with a cloud ide.
