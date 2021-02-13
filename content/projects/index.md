@@ -11,8 +11,8 @@ author: Graham Plata
 
 - **[Roku Remote](https://github.com/grahamplata/roku-remote/)** - _A cli to manage and interact with Roku devices on your local network._
   - Learning more about the GO language and External Control Protocol.
-- **[GO Sixers](https://github.com/grahamplata/sixers/)** - _A cli tool to get past and future statistics about the
-  Philadelphia 76ers basketball team._
+- **[GO Sixers](https://github.com/grahamplata/sixers/)** - _A simple cli tool for the Philadelphia 76ers_
+  - Consumes a basic rest api
 - **[SNAP GMP](https://www.atlasgxp.com/)** - _A manufacturing workflow compliance SAAS project._
   - Contributes to the Cloud and Infrastructure speacializing in Kubernetes and Monitoring
 - **[RGB LAN](https://www.rgblan.org/)** - _A three-day, LAN party and charity video game tournament_
