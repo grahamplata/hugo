@@ -1,72 +1,56 @@
+# Base configuration
 baseURL = "/"
 languageCode = "en-us"
 title = "Graham Plata"
-theme = "nyx"
+theme = "hugo-theme-codex"
 googleAnalytics = "UA-11254643-2"
+copyright = "© {year}"
 
+# Optional params
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02"
+  # Follow the Hugo date/time format reference here: 
+  # https://gohugo.io/functions/format/#gos-layout-string
+  dateFormat = "Jan 2 2006"
 
-  # Metadata mostly used in document's head
-  description = "Homepage and blog for Graham Plata"
-  keywords = "homepage, blog, ops, development, programming"
-  images = [""]
+  # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
+  twitter = "https://twitter.com/grahamplata"
+  github = "https://github.com/grahamplata"
+  email = "mailto:graham.plata@gmail.com"
+  instagram = "https://instagram.com/grahamplata"
+  linkedin = "https://www.linkedin.com/in/grahamplata/"
 
-  # Directory name of your blog content (default is `content/posts`)
-  contentTypeName = "posts"
+  # Set to true to display page title in table of contents in blog posts.
+  showPageTitleInTOC = false
 
-  # Default theme "light" or "dark"
-  defaultTheme = "light"
+# This disables Hugo's default syntax highlighting in favor
+# of prismjs. If you wish to use Hugo's default syntax highlighting
+# over prismjs, remove this. You will also need to remove the prismjs
+# vendor script in layouts/blog/single.html.
+[markup]
+  [markup.highlight]
+    codeFences = false
+    
+  # Set to false to disallow raw HTML in markdown files
+  [markup.goldmark.renderer]
+      unsafe = true
 
-[languages]
-  [languages.en]
-    title = "Graham Plata"
-    subtitle = "A Serial Skill Collector"
-    keywords = ""
-
-    [languages.en.params.logo]
-      logoText = ""
-      logoHomeLink = "/"
-
-  # Social icons
-  [[params.social]]
-    name = "instagram"
-    url  = "https://instagram.com/grahamplata"
-  
-  [[params.social]]
-    name = "twitter"
-    url  = "https://twitter.com/grahamplata/"
-
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/grahamplata/"
-
-  [[params.social]]
-    name = "keybase"
-    url  = "https://keybase.io/grahamplata"
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/grahamplata/"
-
-  [[params.social]]
-    name = "email"
-    url  = "mailto:graham.plata@gmail.com"
-
-
+# Controls the navigation
 [menu]
   [[menu.main]]
     identifier = "about"
+    title       = "About"
     name       = "About"
-    url        = "about/"
+    url        = "/about"
+
   [[menu.main]]
     identifier = "posts"
+    title       = "Posts"
     name       = "Posts"
-    url        = "posts/"
+    url        = "/posts"
+
   [[menu.main]]
     identifier = "projects"
+    title       = "Projects"
     name       = "Projects"
-    url        = "projects/"
+    url        = "/projects"
+
