@@ -7,13 +7,16 @@ author: Graham Plata
 
 ### Where are you currently?
 
-> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Ops Engineer** for **[FacetData](https://www.facetdata.com/)**.
+> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Engineer** for **[FacetData](https://www.facetdata.com/)**.
 
-### What skills would you like to learn in 2020?
+### What skills would you like to focus on 2021?
 
-> - **Snowflake** - Cloud data warehousing.
-> - **Welding** - I want to restore and work on cars eventually.
+> - **Contribute more to Open Source** - I have started to...
+> - **Cloud Engineering** - Continue learning about things in the cloud.
+> - **Start a side project** - Maybe a game or an electronics project.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
+> - **Watercolor Painting** - Fast and Loose.
+> - **Welding** - I want to restore and work on cars eventually.
 
 ### Where would you like to travel?
 
