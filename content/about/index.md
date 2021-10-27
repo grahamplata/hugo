@@ -11,12 +11,9 @@ author: Graham Plata
 
 ### What skills would you like to focus on 2021?
 
-<<<<<<< HEAD
 > - **Contribute more to Open Source** - I have started to...
-=======
->>>>>>> 7160375509c7d501a31f4c77faf045f012d04104
 > - **Cloud Engineering** - Continue learning about things in the cloud.
-> - **Start a side project** - A game or an electronics project.
+> - **Start a side project** - Maybe a game or an electronics project.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
 > - **Watercolor Painting** - Fast and Loose.
 > - **Welding** - I want to restore and work on cars eventually.
