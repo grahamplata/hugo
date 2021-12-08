@@ -7,7 +7,7 @@ author: Graham Plata
 
 ### Where are you currently?
 
-> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Engineer** for **[FacetData](https://www.facetdata.com/)**.
+> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Engineer** for ~~**[FacetData](https://www.facetdata.com/)**~~ now part of [Snap Inc.](https://www.snap.com/en-US)
 
 ### What skills would you like to focus on 2021?
 
