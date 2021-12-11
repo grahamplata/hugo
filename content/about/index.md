@@ -1,21 +1,18 @@
 ---
 title: "About"
-date: 2020-01-01
 draft: false
 author: Graham Plata
 ---
 
 ### Where are you currently?
 
-> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Engineer** for ~~**[FacetData](https://www.facetdata.com/)**~~ now part of **[Snap Inc.](https://www.snap.com/en-US)**
+> Currently, I reside ~~in Phoenixville, Pennsylvania~~ remotely on the east coast solving interesting problems as a **Engineer** for <a style="color:#00a3e0; font-weight:bold;" href="https://www.facetdata.com">Facet</a> now part of 👻 <a style="color:rgb(255, 252, 0); background-color:black; font-weight:bold;" href="https://www.snap.com/en-US">Snap Inc.</a>
 
 ### What skills would you like to focus on 2021?
 
 > - **Contribute more to Open Source** - I have started to...
-> - **Cloud Engineering** - Continue learning about things in the cloud.
-> - **Start a side project** - Maybe a game or an electronics project.
+> - **Finish a side project** - Maybe a game or an electronics project.
 > - **Spirited Driving** - I want to learn to Drift or Autocross.
-> - **Watercolor Painting** - Fast and Loose.
 > - **Welding** - I want to restore and work on cars eventually.
 
 ### Where would you like to travel?
