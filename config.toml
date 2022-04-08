@@ -2,7 +2,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Graham Plata"
-theme = "hugo-theme-codex"
+theme = "etch"
 googleAnalytics = "UA-11254643-2"
 copyright = "© {year}"
 
