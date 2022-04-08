@@ -1,5 +1,6 @@
 ---
-heading: "Hi, I'm Graham"
-subheading: "A serial skill collector."
-handle: "grahamplata"
+title: "Home"
 ---
+
+Welcome to my digital sandbox.
+
