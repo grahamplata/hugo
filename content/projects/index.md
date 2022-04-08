@@ -1,8 +1,5 @@
 ---
 title: "Projects"
-date: 2020-01-01
-draft: false
-author: Graham Plata
 ---
 
 **[Roku Remote](https://github.com/grahamplata/roku-remote/)** - _A cli to manage and interact with Roku devices on your local network._ Learning more about the GO and External Control Protocol.

@@ -1,6 +1,7 @@
 ---
 title: "Nullstring"
-date: "2022-04-8"
-author: grahamplata
-excert: "Nullstring"
+author: "Graham Plata"
+date: "2022-04-08"
+description: "A description of nullstring"
+tags: ["nullstring"]
 ---
