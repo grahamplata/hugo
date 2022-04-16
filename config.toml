@@ -39,6 +39,13 @@ pygmentsUseClasses = true
     url = "/posts/"
     weight = 20
 
+  [[menu.main]]
+    identifier = "charts"
+    name = "charts"
+    title = "charts"
+    url = "/charts/"
+    weight = 30
+
 
 [permalinks]
   posts = "/posts/:title/"
