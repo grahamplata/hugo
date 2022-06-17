@@ -15,6 +15,7 @@ tags: ["guide", "gaming", "steam deck"]
 - [Guides](#guides)
 - [Table of Contents](#table-of-contents)
 - [Parsec](#parsec)
+- [EmuDeck](#emudeck)
 - [Xbox Cloud Gaming](#xbox-cloud-gaming)
   - [Installing Edge Browser](#installing-edge-browser)
   - [Resources](#resources)
@@ -22,6 +23,16 @@ tags: ["guide", "gaming", "steam deck"]
 # Parsec
 
 > TODO: @grahamplata
+
+# EmuDeck
+
+> Play all retro games
+
+1. [Download the Installer](https://www.emudeck.com/EmuDeck.desktop) down below, copy that file to your Deck's Desktop and run it. `wget -q https://www.emudeck.com/EmuDeck.desktop`
+2. Now close Steam and run Steam Rom Manager when asked by the app.
+3. Click on Preview, then Generate App list, wait for all the images to download and then click Save App list.
+   > The first time it could take some minutes, check on the Event Log tab to know when the process is finished.
+4. Close Steam Rom Manager and the Installer window, click on "Return to game mode" on your desktop and you are good to go!
 
 # Xbox Cloud Gaming
 
