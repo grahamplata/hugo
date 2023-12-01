@@ -6,26 +6,17 @@ description: "A catch all for my workings with the Valve Steam Deck"
 tags: ["guide", "gaming", "steam deck"]
 ---
 
-# Guides
-
 > A place for my findings and useful gists for the **Valve** _Steam Deck_
 
-# Table of Contents
+## Table of Contents
 
-- [Guides](#guides)
 - [Table of Contents](#table-of-contents)
-- [Parsec](#parsec)
 - [EmuDeck](#emudeck)
-  - [Resources](#resources)
 - [Xbox Cloud Gaming](#xbox-cloud-gaming)
   - [Installing Edge Browser](#installing-edge-browser)
-  - [Resources](#resources-1)
+- [Resources](#resources)
 
-# Parsec
-
-> TODO: @grahamplata
-
-# EmuDeck
+## EmuDeck
 
 > Play all retro games
 
@@ -35,11 +26,7 @@ tags: ["guide", "gaming", "steam deck"]
    > The first time it could take some minutes, check on the Event Log tab to know when the process is finished.
 4. Close Steam Rom Manager and the Installer window, click on "Return to game mode" on your desktop and you are good to go!
 
-## Resources
-
-- [EmuDeck](https://www.emudeck.com/) - EmuDeck automates the installation of Emulators automatically from the same sources you'll use if done manually.
-
-# Xbox Cloud Gaming
+## Xbox Cloud Gaming
 
 > Installing "Xbox Cloud Gaming (Beta)"
 
@@ -80,3 +67,4 @@ In Desktop Mode on your Steam Deck, launch Steam, navigate to Xbox Cloud Gaming 
 
 - [support.microsoft.com](https://support.microsoft.com/en-gb/topic/xbox-cloud-gaming-in-microsoft-edge-with-steam-deck-43dd011b-0ce8-4810-8302-965be6d53296) - Xbox Cloud Gaming in Microsoft Edge with Steam Deck
 - [flatpak](https://docs.flatpak.org/en/latest/introduction.html) - Flatpak is a framework for distributing desktop applications across various Linux distributions.
+- [EmuDeck](https://www.emudeck.com/) - EmuDeck automates the installation of Emulators automatically from the same sources you'll use if done manually.
