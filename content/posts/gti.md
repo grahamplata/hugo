@@ -9,33 +9,36 @@ Meet my "new to me" 1986 Volkswagen Golf GTI `Toonami`
 
 **&emsp; `Read in Doug Demuro voice ~`** "_This_ 1986 Volkswagen Golf GTI was first sold by Casey Imports of Newport News, Virginia, and was acquired by the selling dealer in October 2023. The car is powered by a 1.8-liter inline-four paired with a five-speed manual transaxle and is finished in black over gray cloth upholstery. Equipment includes 14″ alloy wheels, four-wheel disc brakes, a sport suspension, a 16-valve-style front lip spoiler, a sunroof, a rear spoiler, air conditioning, and a factory “Sound Choice” SC 73 ETR radio. This Mk2 GTI shows 168k miles and is now offered at no reserve by the selling dealer with a window sticker, manufacturer’s literature, service records, a Carfax report, and a clean Pennsylvania title."
 
-> Neat ~ 1986 Volkswagen Golf GTI Original Bring a trailer [Link](https://bringatrailer.com/listing/1986-volkswagen-golf-gti-5/)
+> Neat ~ 1986 Volkswagen Golf GTI Original Bring a trailer [Link](https://bringatrailer.com/listing/1986-volkswagen-golf-gti-5/) ...Sorry Doug
 
 ## Build
 
+Below is a collection of parts that I liked, researched or thought were cool. In an effort to organize thoughts I have made lists of thing to explore.
+
 ### Wheels
 
-- [JDM SSR MK2 mk-2](https://cdn11.bigcommerce.com/s-ldaxybx767/images/stencil/1280x1280/products/29060/145868/_1525858461__65632.1583258661.jpg?c=3)
-- [BBS RG-F 15X7 4X100 ET42 SPORT SILVER](https://blackforestindustries.com/collections/mk2-8v/products/bbs-rg-f-15x7-4x100-et42-sport-silver-wheel-70mm-pfs-clip-required?variant=43129368674551)
-- [RML Snowflake](https://www.rmlwheels.com/products/15x8-snowflake)
-- [ATS 15x7 Cup wheels](https://alloywheelshop.com/products/ats-cup-alloy-wheel-15x7-et28-4x100-diamond-black-polished-63-4mm-cb?variant=40445044687056)
-- [3SDM 0.05 16X9.0 4X100 ET20](https://blackforestindustries.com/collections/mk2-8v/products/3sdm-0-05-16x9-0-4x100-et20?variant=9609818046508)
-- [FIFTEEN52 PODIUM 17X7.5 4X100](https://blackforestindustries.com/collections/mk2-8v/products/fifteen52-podium-17x7-5-4x100-4x108-et42-2?variant=43111264682231)
+- BBS RS
+- SSR MK2 mk-2
+- BBS RG-F 15X7 4X100 ET42 SPORT
+- RML Snowflake
+- ATS 15x7 Cup
+- 3SDM 0.05 16X9.0 4X100
+- FIFTEEN52 PODIUM 17X7.5 4X100
 
 ## Suspension
 
-[Solo Werks coilovers](https://blackforestindustries.com/collections/mk2-8v/products/solo-werks-mk2-mk3-vw-coilover-kit?variant=31696936337457)
+- [Solo Werks coilovers](https://blackforestindustries.com/collections/mk2-8v/products/solo-werks-mk2-mk3-vw-coilover-kit?variant=31696936337457)
 
 ## Exterior
 
-Swap to round headlights
+Conversion to to round headlights
 
 - [MK2 ROUND HEADLIGHT RADIATOR SUPPORT](https://blackforestindustries.com/collections/mk2-lighting/products/mk2-round-headlight-radiator-support?variant=9628342845484)
 - [MK2 CROSS-HAIR HEADLIGHTS - FACETED OE STYLE](https://blackforestindustries.com/collections/mk2-lighting/products/mk2-cross-hair-headlights-faceted-oe-style-pair?variant=32394801610801)
 - [MK2 7" CRYSTAL CLEAR CROSSHAIR HEADLIGHTS](https://blackforestindustries.com/products/mk2-7-crystal-clear-crosshair-headlights-pair?pr_prod_strat=copurchase&pr_rec_id=a2a2236ff&pr_rec_pid=973103661100&pr_ref_pid=973306724396&pr_seq=uniform)
 - [H4 HEADLIGHT ADAPTER W/ CITY LIGHT HARNESS](https://blackforestindustries.com/collections/mk2-lighting/products/9006-9007-h4-headlight-adapter-w-city-light-harness?variant=9611178508332)
 
-Custom grill aero/quad
+> Todo Document
 
 ## Interior
 
@@ -43,19 +46,13 @@ Custom grill aero/quad
 
 > [GSB ALCANTARA - GOLF BALL](https://blackforestindustries.com/collections/mk2-8v/products/gsb-alcantara-golf-ball-vw-audi-manual?variant=14470249381932)
 
-![momo-prototipo](https://s3.us-east-1.amazonaws.com/momo-craft-storage/assets/images/products/Steering-Wheels/_productImages/230313/momo-prototipo-leather-steering-wheel-370mm-brushed-spoke-face.webp)
-
-> [](https://momo.com/en-us/shop/prototipo?color=Light%20Gray)
-
 ## Neat
+
+- JDM Volkswagen SEV marchal Lights
 
 ![11](https://i.ebayimg.com/images/g/MQsAAOSwxbhkoqEV/s-l1600.jpg)
 
-> [MARCHAL Headlight 722/702 Starlux Multi Riff 180φ Clear lens Universal 800-8420](https://www.ebay.com/itm/385728412211?_trkparms=amclksrc%3DITM%26aid%3D1110006%26algo%3DHOMESPLICE.SIM%26ao%3D1%26asc%3D20231107084023%26meid%3D6c31704beebc4fcdb001edeca98e1c89%26pid%3D101875%26rk%3D4%26rkt%3D4%26sd%3D185726052580%26itm%3D385728412211%26pmt%3D1%26noa%3D0%26pg%3D4429486%26algv%3DSimplAMLv11WebTrimmedV3MskuWithLambda85KnnRecallV1V2V4ItemNrtInQueryAndCassiniVisualRankerAndBertRecallWithVMEV3CPCAuto%26brand%3DMarchal&_trksid=p4429486.c101875.m1851&amdata=cksum%3A3857284122116c31704beebc4fcdb001edeca98e1c89%7Cenc%3AAQAIAAABYObhgc4Nk8%252BdtAwOww4FKLaj%252FQ5qqgDlQCuqZA43WcPFUWDERCUugbbOk7XQv0JXlBfqCg2xKF3WcPghxGMFw2oSlXvfExEaMYr7I7LmrHcP6czY1wIMt0ORyKiCWt95xldincyyBx3g%252BNDW%252B%252FhWUgTaBhK6xAm%252BJIbCOMehu%252BdwUVUcjXiT8%252FlWnDGylByz%252Fvn0w4wO%252BtqDxhJEzovldpSYbAdaHuMCrigXBpNHnHqZJhp%252FYVbmVLl6LA%252BnKJIRCJ7KatR%252BjCFvwCV18GLOSjk9M0szVJwUnV9WWVewb58fcHc%252FTJc8Yb%252F8xv1JiN7JDgsMPVyx96doQmQj5BY6brgjzXPbQFZbBg7PXSaAPasn69ibSC7ZB4vBK%252BWUBdPI%252FQKzc9bMTXWHGLNsHq8F5EoNOjYnA17teZ5LVFtVv9eNV5sEoSNMBho0LzeJ87bprkZEcYLtP2ZM0sS2XqU4qCg%253D%7Campid%3APL_CLK%7Cclp%3A4429486&epid=26061285642)
-
-![12](https://i.etsystatic.com/39949162/r/il/01e388/4478699914/il_1588xN.4478699914_5ip5.jpg)
-
-> [JDM Volkswagen Lights](https://www.etsy.com/listing/1383754003/jdm-vw-volkswagen-marchal-aircooled)
+![marchal](https://i.etsystatic.com/39949162/r/il/01e388/4478699914/il_1588xN.4478699914_5ip5.jpg)
 
 ## Inspiration
 
