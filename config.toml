@@ -8,6 +8,8 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+staticDir = ["static"]
+
 [params]
   description = "Graham Plata's Digital Sandbox"
   copyright = "Copyright © 2022 Graham Plata"
