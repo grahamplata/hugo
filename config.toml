@@ -8,44 +8,53 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+staticDir = ["static"]
+
 [params]
-  description = "Graham Plata's Digital Sandbox"
-  copyright = "Copyright © 2022 Graham Plata"
-  dark = "auto"
-  highlight = true
-  # Set to true to display page title in table of contents in blog posts.
-  showPageTitleInTOC = false
+description = "Graham Plata's Digital Sandbox"
+copyright = "Copyright © 2024 Graham Plata"
+dark = "auto"
+highlight = true
+# Set to true to display page title in table of contents in blog posts.
+showPageTitleInTOC = false
 
 [markup.goldmark.renderer]
-  # Allow HTML in Markdown
-  unsafe = true
+# Allow HTML in Markdown
+unsafe = true
 
-  [markup.tableOfContents]
-    ordered = true
+[markup.tableOfContents]
+ordered = true
 
 # Controls the navigation
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name = "about"
-    title = "about"
-    url = "/about/"
-    weight = 10
+[[menu.main]]
+identifier = "about"
+name = "about"
+title = "about"
+url = "/about/"
+weight = 10
 
-  [[menu.main]]
-    identifier = "posts"
-    name = "posts"
-    title = "posts"
-    url = "/posts/"
-    weight = 20
+[[menu.main]]
+identifier = "posts"
+name = "posts"
+title = "posts"
+url = "/posts/"
+weight = 20
 
-  [[menu.main]]
-    identifier = "charts"
-    name = "charts"
-    title = "charts"
-    url = "/charts/"
-    weight = 30
+[[menu.main]]
+identifier = "charts"
+name = "charts"
+title = "charts"
+url = "/charts/"
+weight = 30
+
+[[menu.main]]
+identifier = "projects"
+name = "projects"
+title = "projects"
+url = "/projects/"
+weight = 40
 
 
 [permalinks]
-  posts = "/posts/:title/"
+posts = "/posts/:title/"

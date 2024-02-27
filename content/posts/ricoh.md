@@ -10,13 +10,13 @@ tags: ["photo", "camera"]
 
 I was gifted a [RICOH GR IIIx](https://www.bhphotovideo.com/c/product/1664769-REG/ricoh_15286_gr_iiix_digital_camera.html) for christmas by the lovely [@nietzschesandcream](https://www.instagram.com/nietzschesandcream/) and it has fast become my favorite piece of kit. Over the last decade I have hopped between ecosystems lusting over lenses and struggled to have the correct tool on me for the right moment. The simplistic Ricoh satisfes all that lust in a small focused form factor. The GR shouldn't take good photographs in this day and age of smart phones. But it does.
 
-![Rabbit GTI](../../static/img/1986-gti.jpg)
+![Rabbit GTI](/img/1986-gti.jpg)
 
 > A scenic romp in a 1986 VW GTI
 
 I find that 40mm is perfectly suited to my needs. The static focal length allows me to focus on composition, framing, and making a distraction free image. Although this may sound similar to a smart phone the distraction free nature of the tool for the moment eliminates distractions.
 
-![Japan 2023](../../static/img/R0001390.JPG)
+![Japan 2023](/img/R0001390.JPG)
 
 ## My Current Settings
 
@@ -27,7 +27,7 @@ My default settings 99% of the time. These are a good start but you should absol
 _I tried to write these sequentially through the menus._
 
 - I prefer _P_ or _Program Mode_ as I am able to have the camera do all the maths for me. If I can offload work to the camera I want it to select what it feels is “optimal” for aperture and shutter-speed within the initial parameters I have set. I want to worry about the moment.
-- Use _Autofocus_ You are more likely to capture the moment you want. This is by far,  #1 priority in photography.
+- Use _Autofocus_ You are more likely to capture the moment you want. This is by far, #1 priority in photography.
 - AE Metering ~ (auto exposure metering): Highlight-Weighted
 - File: JPEG / RAW - Don't shoot raw if you have zero intention of editing.
 - Auto power off / Sleep mode: 30 minutes
@@ -39,15 +39,15 @@ _I tried to write these sequentially through the menus._
 
 ## Gallery
 
-![Japan 2023](../../static/img/R0001445.JPG)
+![Japan 2023](/img/R0001445.JPG)
 
 > Gundam Factory Yokohama
 
-![Japan 2023](../../static/img/R0001507.JPG)
+![Japan 2023](/img/R0001507.JPG)
 
-![Japan 2023](../../static/img/R0001509.JPG)
+![Japan 2023](/img/R0001509.JPG)
 
-![Japan 2023](../../static/img/R0001662.JPG)
+![Japan 2023](/img/R0001662.JPG)
 
 > Tori Gates
 
