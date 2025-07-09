@@ -8,6 +8,8 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+timeout = "60000ms"
+
 staticDir = ["static"]
 
 # Image processing settings
