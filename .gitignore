@@ -3,3 +3,4 @@
 
 # Ignore Build folder
 public/
+_gen/

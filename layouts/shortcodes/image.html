@@ -1,0 +1,95 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- $class := .Get "class" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $sizes := .Get "sizes" | default "(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" -}}
+{{- $showExif := .Get "exif" | default false -}}
+{{- $process := .Get "process" | default "resize" -}}
+{{- $quality := .Get "quality" | default 85 -}}
+{{- $format := .Get "format" | default "webp" -}}
+
+{{- $image := .Page.Resources.GetMatch $src -}}
+{{- if $image -}}
+  {{- /* Process image based on specified method */ -}}
+  {{- $processedImage := $image -}}
+  {{- if eq $process "resize" -}}
+    {{- $processedImage = $image.Resize (printf "800x %s q%d" $format $quality) -}}
+  {{- else if eq $process "fit" -}}
+    {{- $processedImage = $image.Fit (printf "800x600 %s q%d" $format $quality) -}}
+  {{- else if eq $process "fill" -}}
+    {{- $processedImage = $image.Fill (printf "800x600 %s q%d" $format $quality) -}}
+  {{- else if eq $process "crop" -}}
+    {{- $processedImage = $image.Crop (printf "800x600 %s q%d" $format $quality) -}}
+  {{- end -}}
+  
+  {{- /* Generate responsive versions */ -}}
+  {{- $small := $image.Resize (printf "400x %s q%d" $format $quality) -}}
+  {{- $medium := $image.Resize (printf "800x %s q%d" $format $quality) -}}
+  {{- $large := $image.Resize (printf "1200x %s q%d" $format $quality) -}}
+  
+  {{- /* Fallback JPEG versions */ -}}
+  {{- $smallJpg := $image.Resize (printf "400x jpeg q%d" $quality) -}}
+  {{- $mediumJpg := $image.Resize (printf "800x jpeg q%d" $quality) -}}
+  {{- $largeJpg := $image.Resize (printf "1200x jpeg q%d" $quality) -}}
+  
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    <picture>
+      {{- /* WebP sources */ -}}
+      <source srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w" 
+              type="image/webp" 
+              sizes="{{ $sizes }}">
+      
+      {{- /* JPEG fallback */ -}}
+      <source srcset="{{ $smallJpg.RelPermalink }} 400w, {{ $mediumJpg.RelPermalink }} 800w, {{ $largeJpg.RelPermalink }} 1200w" 
+              type="image/jpeg" 
+              sizes="{{ $sizes }}">
+      
+      <img src="{{ $mediumJpg.RelPermalink }}" 
+           srcset="{{ $smallJpg.RelPermalink }} 400w, {{ $mediumJpg.RelPermalink }} 800w, {{ $largeJpg.RelPermalink }} 1200w"
+           sizes="{{ $sizes }}"
+           alt="{{ $alt }}"
+           {{ with $width }}width="{{ . }}"{{ end }}
+           {{ with $height }}height="{{ . }}"{{ end }}
+           loading="{{ $loading }}"
+           decoding="async">
+    </picture>
+    
+    {{- if $caption -}}
+      <figcaption>{{ $caption | markdownify }}</figcaption>
+    {{- end -}}
+    
+    {{- /* Display EXIF data if requested */ -}}
+    {{- if $showExif -}}
+      {{- with $image.Exif -}}
+        <details class="exif-data">
+          <summary>Photo Details</summary>
+          <dl>
+            {{- with .Date -}}<dt>Date</dt><dd>{{ .Format "January 2, 2006" }}</dd>{{- end -}}
+            {{- with .Tags.Make -}}<dt>Camera</dt><dd>{{ . }}{{- with $.Exif.Tags.Model }} {{ . }}{{- end }}</dd>{{- end -}}
+            {{- with .Tags.LensModel -}}<dt>Lens</dt><dd>{{ . }}</dd>{{- end -}}
+            {{- with .Tags.FocalLength -}}<dt>Focal Length</dt><dd>{{ . }}mm</dd>{{- end -}}
+            {{- with .Tags.FNumber -}}<dt>Aperture</dt><dd>f/{{ . }}</dd>{{- end -}}
+            {{- with .Tags.ExposureTime -}}<dt>Shutter Speed</dt><dd>{{ . }}s</dd>{{- end -}}
+            {{- with .Tags.ISOSpeedRatings -}}<dt>ISO</dt><dd>{{ . }}</dd>{{- end -}}
+            {{- if and .Lat .Long -}}<dt>Location</dt><dd>{{ .Lat }}, {{ .Long }}</dd>{{- end -}}
+          </dl>
+        </details>
+      {{- end -}}
+    {{- end -}}
+  </figure>
+{{- else -}}
+  {{- warnf "Image not found: %s in page %s" $src .Page.RelPermalink -}}
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    <img src="{{ $src }}" alt="{{ $alt }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         loading="{{ $loading }}"
+         decoding="async">
+    {{- if $caption -}}
+      <figcaption>{{ $caption | markdownify }}</figcaption>
+    {{- end -}}
+  </figure>
+{{- end -}}
