@@ -12,7 +12,7 @@ staticDir = ["static"]
 
 [params]
 description = "Graham Plata's Digital Sandbox"
-copyright = "Copyright © 2024 Graham Plata"
+copyright = "Copyright © 2025 Graham Plata"
 dark = "auto"
 highlight = true
 # Set to true to display page title in table of contents in blog posts.
@@ -40,21 +40,6 @@ name = "posts"
 title = "posts"
 url = "/posts/"
 weight = 20
-
-[[menu.main]]
-identifier = "charts"
-name = "charts"
-title = "charts"
-url = "/charts/"
-weight = 30
-
-[[menu.main]]
-identifier = "projects"
-name = "projects"
-title = "projects"
-url = "/projects/"
-weight = 40
-
 
 [permalinks]
 posts = "/posts/:title/"
