@@ -1,0 +1,60 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- $class := .Get "class" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $sizes := .Get "sizes" | default "(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" -}}
+
+{{- $image := .Page.Resources.GetMatch $src -}}
+{{- if $image -}}
+  {{- /* Generate multiple sizes for responsive images */ -}}
+  {{- $small := $image.Resize "400x webp q85" -}}
+  {{- $medium := $image.Resize "800x webp q85" -}}
+  {{- $large := $image.Resize "1200x webp q85" -}}
+  
+  {{- /* Fallback JPEG versions */ -}}
+  {{- $smallJpg := $image.Resize "400x jpeg q85" -}}
+  {{- $mediumJpg := $image.Resize "800x jpeg q85" -}}
+  {{- $largeJpg := $image.Resize "1200x jpeg q85" -}}
+  
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    <picture>
+      {{- /* WebP sources with multiple sizes */ -}}
+      <source srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w" 
+              type="image/webp" 
+              sizes="{{ $sizes }}">
+      
+      {{- /* JPEG fallback with multiple sizes */ -}}
+      <source srcset="{{ $smallJpg.RelPermalink }} 400w, {{ $mediumJpg.RelPermalink }} 800w, {{ $largeJpg.RelPermalink }} 1200w" 
+              type="image/jpeg" 
+              sizes="{{ $sizes }}">
+      
+      {{- /* Default image */ -}}
+      <img src="{{ $mediumJpg.RelPermalink }}" 
+           srcset="{{ $smallJpg.RelPermalink }} 400w, {{ $mediumJpg.RelPermalink }} 800w, {{ $largeJpg.RelPermalink }} 1200w"
+           sizes="{{ $sizes }}"
+           alt="{{ $alt }}"
+           {{ with $width }}width="{{ . }}"{{ end }}
+           {{ with $height }}height="{{ . }}"{{ end }}
+           loading="{{ $loading }}"
+           decoding="async">
+    </picture>
+    {{- if $caption -}}
+      <figcaption>{{ $caption | markdownify }}</figcaption>
+    {{- end -}}
+  </figure>
+{{- else -}}
+  {{- warnf "Image not found: %s in page %s" $src .Page.RelPermalink -}}
+  <figure{{ with $class }} class="{{ . }}"{{ end }}>
+    <img src="{{ $src }}" alt="{{ $alt }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}
+         loading="{{ $loading }}"
+         decoding="async">
+    {{- if $caption -}}
+      <figcaption>{{ $caption | markdownify }}</figcaption>
+    {{- end -}}
+  </figure>
+{{- end -}}

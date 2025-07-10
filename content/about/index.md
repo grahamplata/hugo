@@ -2,4 +2,8 @@
 title: "About"
 ---
 
-Currently, I reside remotely on the east coast solving interesting problems as a **Software Engineer** for <a href="https://www.facetdata.com">Facet</a> now part of <a style="background: rgb(255, 252, 0);" href="https://www.snap.com/en-US">👻 Snap Inc.</a>
+{{< figure src="6.JPG" alt="Toonami">}}
+
+### Hi there 👋
+
+I'm Graham! I did Ops things for [@syapse](https://github.com/syapse), ~~[@facetdata](https://github.com/facetdata)~~ ~> [@snap](https://github.com/snapchat/) and now I make visualizations tools at [@rill](https://github.com/rilldata)

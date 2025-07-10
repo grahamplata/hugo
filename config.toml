@@ -8,24 +8,41 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
+timeout = "120000ms" # Increase timeout to 120 seconds
+
 staticDir = ["static"]
+
+# Image processing settings
+[imaging]
+resampleFilter = "lanczos"
+quality = 85
+anchor = "smart"
+bgColor = "#ffffff"
+hint = "photo"
+# Enable EXIF data processing
+exif.disableDate = false
+exif.disableLatLong = false
+exif.excludeFields = "GPS"
+
+# Image format specific settings
+[imaging.formats]
+[imaging.formats.webp]
+quality = 85
+lossless = false
 
 [params]
 description = "Graham Plata's Digital Sandbox"
-copyright = "Copyright © 2024 Graham Plata"
+copyright = "Copyright © 2025 Graham Plata"
 dark = "auto"
 highlight = true
-# Set to true to display page title in table of contents in blog posts.
 showPageTitleInTOC = false
 
 [markup.goldmark.renderer]
-# Allow HTML in Markdown
 unsafe = true
 
 [markup.tableOfContents]
 ordered = true
 
-# Controls the navigation
 [menu]
 [[menu.main]]
 identifier = "about"
@@ -40,21 +57,6 @@ name = "posts"
 title = "posts"
 url = "/posts/"
 weight = 20
-
-[[menu.main]]
-identifier = "charts"
-name = "charts"
-title = "charts"
-url = "/charts/"
-weight = 30
-
-[[menu.main]]
-identifier = "projects"
-name = "projects"
-title = "projects"
-url = "/projects/"
-weight = 40
-
 
 [permalinks]
 posts = "/posts/:title/"
