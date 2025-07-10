@@ -8,7 +8,7 @@ enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 
-timeout = "60000ms"
+timeout = "120000ms" # Increase timeout to 120 seconds
 
 staticDir = ["static"]
 
