@@ -23,7 +23,7 @@ tags: ["guide", "gaming", "steam deck"]
 
 # Parsec
 
-> TODO: @grahamplata
+> A remote desktop application for low-latency gaming.
 
 # EmuDeck
 
@@ -51,30 +51,30 @@ Launch the Steam Deck into Desktop Mode **STEAM** button menu.
 
 Find **Microsoft Edge (beta)** in the Discover Software Center application and install.
 
-Upon completion open the app drawer locate Microsoft Edge (beta), then right-click and Add to Steam. A window should appear, scroll to find Microsoft Edge (beta), check the box next to it, and select Add Selected Programs.
+Upon completion, open the app drawer, locate Microsoft Edge (beta), then right-click and Add to Steam. A window should appear, scroll to find Microsoft Edge (beta), check the box next to it, and select Add Selected Programs.
 
 Launch a fresh terminal window (Konsole) and execute the command below.
 
 ```bash
 # The following command allows Edge to communicate with the Steam Deck's controller interfaces
-flatpak –user override –filesystem=/run/udev:ro com.microsoft.Edge
+flatpak --user override --filesystem=/run/udev:ro com.microsoft.Edge
 ```
 
-Open Steam from the deskop and navigate to non steam applications. Right click Edge and change its name to "Xbox Cloud Gaming (Beta)". Next Right click again and adjust the shortcut launch options.
+Open Steam from the desktop and navigate to non-steam applications. Right-click Edge and change its name to "Xbox Cloud Gaming (Beta)". Next, right-click again and adjust the shortcut launch options.
 
 ```bash
 # Append the options to the end of the existing command (after @@u @@)
 --window-size=1024,640 --force-device-scale-factor=1.25 --device-scale-factor=1.25 --kiosk "https://www.xbox.com/play"
 ```
 
-Next Steps are optional, but you can add custom artwork by following the next steps.
+Next steps are optional, but you can add custom artwork by following the next steps.
 
 ```bash
 # Download Microsoft assets
 wget -q --show-progress https://aka.ms/EdgeXboxDeckArt
 ```
 
-In Desktop Mode on your Steam Deck, launch Steam, navigate to Xbox Cloud Gaming (Beta) in your Library, right-click it, select Properties and select the appropriate images.
+In Desktop Mode on your Steam Deck, launch Steam, navigate to Xbox Cloud Gaming (Beta) in your Library, right-click it, select Properties, and select the appropriate images.
 
 ## Resources
 

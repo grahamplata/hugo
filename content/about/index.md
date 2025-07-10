@@ -2,6 +2,8 @@
 title: "About"
 ---
 
+{{< figure src="6.JPG" alt="Toonami">}}
+
 ### Hi there 👋
 
 I'm Graham! I did Ops things for [@syapse](https://github.com/syapse), ~~[@facetdata](https://github.com/facetdata)~~ ~> [@snap](https://github.com/snapchat/) and now I make visualizations tools at [@rill](https://github.com/rilldata)
