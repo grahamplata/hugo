@@ -10,7 +10,26 @@ pygmentsUseClasses = true
 
 timeout = "120000ms" # Increase timeout to 120 seconds
 
+# Build performance settings
+enableGitInfo = false
+enableRobotsTXT = true
+
+# Disable unnecessary taxonomies for better performance
+disableKinds = ["robotsTXT"]
+
 staticDir = ["static"]
+
+# Cache settings
+[caches]
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = -1
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = "8760h" # 1 year
+  [caches.getresource]
+    dir = ':cacheDir/:project'
+    maxAge = -1
 
 # Image processing settings
 [imaging]
@@ -29,6 +48,11 @@ exif.excludeFields = "GPS"
 [imaging.formats.webp]
 quality = 85
 lossless = false
+[imaging.formats.jpeg]
+quality = 85
+progressive = true
+[imaging.formats.png]
+compressionLevel = 6
 
 [params]
 description = "Graham Plata's Digital Sandbox"
