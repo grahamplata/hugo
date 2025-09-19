@@ -27,9 +27,6 @@ staticDir = ["static"]
   [caches.images]
     dir = ':resourceDir/_gen'
     maxAge = "8760h" # 1 year
-  [caches.getresource]
-    dir = ':cacheDir/:project'
-    maxAge = -1
 
 # Image processing settings
 [imaging]
