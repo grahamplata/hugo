@@ -29,6 +29,11 @@ exif.excludeFields = "GPS"
 [imaging.formats.webp]
 quality = 85
 lossless = false
+[imaging.formats.jpeg]
+quality = 85
+progressive = true
+[imaging.formats.png]
+compressionLevel = 6
 
 [params]
 description = "Graham Plata's Digital Sandbox"
