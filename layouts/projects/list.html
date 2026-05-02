@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<main>
+    <div class="posts">
+        {{- range .Data.Pages -}}
+        <article>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            {{- if .Description }}
+            <p class="description">{{ .Description }}</p>
+            {{- end }}
+            {{- if .Params.project_type }}
+            <span class="project-type">{{ .Params.project_type }}</span>
+            {{- end }}
+        </article>
+        {{- end }}
+    </div>
+</main>
+{{- end }}
