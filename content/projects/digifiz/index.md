@@ -95,10 +95,6 @@ OnEnter(ctx) → Update() → Draw() → OnExit()
 
 Scenes manage their own state and receive shared context (vehicle data, config) on entry. Transitions include fade effects handled by the SceneManager. This pattern makes menu → splash → dashboard flows explicit and testable.
 
-### Pointer Nullability for Optional Values
-
-`InputData` uses pointers (`*int`, `*bool`) to distinguish between "no update" (nil) and "update to zero/false"—avoiding ambiguity when parsing sparse input from keyboards or CAN bus.
-
 ## The Hackable Dashboard
 
 Digifiz's true power emerges when you connect it to real vehicle data. The architecture is intentionally designed for this:
