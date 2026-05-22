@@ -36,6 +36,7 @@ progressive = true
 compressionLevel = 6
 
 [params]
+author = "graham.plata@gmail.com"
 description = "Graham Plata's Digital Sandbox"
 copyright = "Copyright © 2025 Graham Plata"
 dark = "auto"
@@ -69,6 +70,13 @@ name = "projects"
 title = "projects"
 url = "/projects/"
 weight = 30
+
+[[menu.main]]
+identifier = "gists"
+name = "gists"
+title = "gists"
+url = "/gists/"
+weight = 40
 
 [permalinks]
 posts = "/posts/:title/"
