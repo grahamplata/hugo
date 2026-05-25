@@ -1,9 +1,10 @@
 ---
 title: "Toonami - The MK2 GTI"
 author: "Graham Plata"
-date: "2024-09-17"
+date: 2024-09-17
 description: "A journey with my 1986 MK2 GTI"
 tags: ["vw", "volkswagen", "gti"]
+draft: false
 ---
 
 Meet ["Toonami"](https://en.wikipedia.org/wiki/Toonami), my [1986 MKII GTI](https://en.wikipedia.org/wiki/Volkswagen_Golf_Mk2). This beautiful specimen came into my possession after discovering this [Bring A Trailer](https://bringatrailer.com/listing/1986-volkswagen-golf-gti-5/) listing while searching for my first "project" car. This GTI is a one-owner 8v with a lively history and over **186,000** miles on the clock. 

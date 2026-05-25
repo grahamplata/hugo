@@ -1,13 +1,15 @@
 ---
 title: "A Guide to Wookies in the Woods"
-date: "2026-04-13"
+author: "Graham Plata"
+date: 2026-04-13
 description: "My experience at Wookies in the Woods"
 tags: ["travel", "cars", "photography"]
+draft: false
 ---
 
-{{< figure src="GRP_6076_preview.jpeg" alt="Wookies in t    he Woods" caption="Route 129" >}}
+{{< figure src="GRP_6076_preview.jpeg" alt="Wookies in the Woods" caption="Route 129" >}}
 
-## Wookies in the Woods
+## Overview
 
 Wookies In The Woods is an annual gathering of VW R32 and Golf R owners centered around US-129 aka "Tail of the Dragon". The route covers 318 curves in eleven miles, making it one of the most well-known driving roads in the country for motorcycles and sports cars alike. The event is community-organized and draws attendees from across the US.
 
