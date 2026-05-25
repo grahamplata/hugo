@@ -1,6 +1,6 @@
 # Base configuration
 baseURL = "/"
-languageCode = "en-US"
+locale = "en-US"
 title = "Graham Plata"
 theme = "etch"
 googleAnalytics = "UA-11254643-2"

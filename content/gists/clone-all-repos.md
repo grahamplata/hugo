@@ -1,7 +1,7 @@
 ---
 title: "Clone All Repos"
 author: "Graham Plata"
-date: 2026-05-22T09:49:09-04:00
+date: 2026-05-22
 type: "gist"
 language: "bash"
 description: "Clone all repositories from a GitHub organization"

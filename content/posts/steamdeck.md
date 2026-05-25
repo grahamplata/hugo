@@ -1,16 +1,17 @@
 ---
 title: "Steam Deck"
 author: "Graham Plata"
-date: "2022-04-16"
+date: 2022-04-16
 description: "A catch all for my workings with the Valve Steam Deck"
-tags: ["guide", "gaming", "steam deck"]
+tags: ["guide", "gaming", "steam-deck"]
+draft: false
 ---
 
-# Guides
+## Overview
 
-> A place for my findings and useful gists for the **Valve** _Steam Deck_
+A place for my findings and useful gists for the **Valve** _Steam Deck_
 
-# Table of Contents
+## Table of Contents
 
 - [Guides](#guides)
 - [Table of Contents](#table-of-contents)
@@ -21,15 +22,19 @@ tags: ["guide", "gaming", "steam deck"]
   - [Installing Edge Browser](#installing-edge-browser)
   - [Resources](#resources-1)
 
-# Parsec
+## Parsec
 
 > A remote desktop application for low-latency gaming.
 
-# EmuDeck
+## EmuDeck
 
 > Play all retro games
 
-1. [Download the Installer](https://www.emudeck.com/EmuDeck.desktop) down below, copy that file to your Deck's Desktop and run it. `wget -q https://www.emudeck.com/EmuDeck.desktop`
+1. [Download the Installer](https://www.emudeck.com/EmuDeck.desktop) down below, copy that file to your Deck's Desktop and run it.
+
+```bash
+wget -q https://www.emudeck.com/EmuDeck.desktop
+```
 2. Now close Steam and run Steam Rom Manager when asked by the app.
 3. Click on Preview, then Generate App list, wait for all the images to download and then click Save App list.
    > The first time it could take some minutes, check on the Event Log tab to know when the process is finished.
@@ -39,7 +44,7 @@ tags: ["guide", "gaming", "steam deck"]
 
 - [EmuDeck](https://www.emudeck.com/) - EmuDeck automates the installation of Emulators automatically from the same sources you'll use if done manually.
 
-# Xbox Cloud Gaming
+## Xbox Cloud Gaming
 
 > Installing "Xbox Cloud Gaming (Beta)"
 
@@ -47,7 +52,9 @@ tags: ["guide", "gaming", "steam deck"]
 
 Launch the Steam Deck into Desktop Mode **STEAM** button menu.
 
-`Power > Switch to Desktop`
+```
+Power > Switch to Desktop
+```
 
 Find **Microsoft Edge (beta)** in the Discover Software Center application and install.
 

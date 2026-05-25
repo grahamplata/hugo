@@ -1,9 +1,10 @@
 ---
 title: "L'oe Show"
 author: "Graham Plata"
-date: "2025-09-13"
+date: 2025-09-13
 description: "L'oe Show 2025"
 tags: ["photos", "cars"]
+draft: false
 ---
 
 Full Coverage by Zach Robert https://raw.visualstasis.net/loeshow2025/
