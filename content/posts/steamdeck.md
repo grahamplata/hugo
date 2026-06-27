@@ -2,7 +2,7 @@
 title: "Steam Deck"
 author: "Graham Plata"
 date: 2022-04-16
-description: "A catch all for my workings with the Valve Steam Deck"
+description: "A catch all for eveything Steam Deck"
 tags: ["guide", "gaming", "steam-deck"]
 draft: false
 ---

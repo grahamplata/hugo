@@ -1,8 +1,8 @@
 ---
-title: "RICOH GR IIIx Settings"
+title: "RICOH GR"
 author: "Graham Plata"
 date: 2024-02-26
-description: "My preferred settings for the RICOH GR IIIx"
+description: "My preferred settings"
 tags: ["photo", "camera"]
 draft: false
 ---

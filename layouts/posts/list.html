@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<main>
+    <h3>Posts</h3>
+    <div class="posts-by-year">
+        {{- range (.Data.Pages.GroupByDate "2006") -}}
+        <section class="posts-year">
+            <h4>{{ .Key }}</h4>
+            <ul id="posts">
+                {{- range .Pages -}}
+                {{ .Render "li" }}
+                {{- end -}}
+            </ul>
+        </section>
+        {{- end -}}
+    </div>
+</main>
+{{- end -}}
