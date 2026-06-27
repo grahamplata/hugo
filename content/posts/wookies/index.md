@@ -2,7 +2,7 @@
 title: "A Guide to Wookies in the Woods"
 author: "Graham Plata"
 date: 2026-04-13
-description: "My experience at Wookies in the Woods"
+description: "Things I will forget..."
 tags: ["travel", "cars", "photography"]
 draft: false
 ---
