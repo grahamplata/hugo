@@ -6,4 +6,4 @@ description: "An ode to physical objects"
 draft: false
 ---
 
-Magazines, Records and Artifacts
+Magazines, Records, and Artifacts
