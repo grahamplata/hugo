@@ -1,0 +1,12 @@
+{{- $src := .Get "src" -}}
+{{- $class := .Get "class" -}}
+{{- $video := .Page.Resources.GetMatch $src -}}
+
+{{- if $video -}}
+  <video{{ with $class }} class="{{ . }}"{{ end }} controls muted playsinline preload="metadata" style="display: block; width: 100%; height: auto;">
+    <source src="{{ $video.RelPermalink }}" type="{{ $video.MediaType.Type }}">
+    Your browser does not support the video element.
+  </video>
+{{- else -}}
+  {{- warnf "Video not found: %s in page %s" $src .Page.RelPermalink -}}
+{{- end -}}

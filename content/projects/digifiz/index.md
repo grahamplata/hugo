@@ -1,9 +1,8 @@
 ---
-title: "Digifiz: Recreating the Legendary VW Digital Dashboard"
+title: "DigiFiz – Recreating the Legendary VW Digital Dashboard"
 author: "Graham Plata"
 date: 2026-05-01
 type: "project"
-project_type: "software"
 description: "Open-source recreation of the iconic 1980s Volkswagen DigiFiz digital instrument cluster for modern vehicles"
 tags: ["volkswagen", "automotive", "retro-futurism", "open-source", "dashboard"]
 draft: false
@@ -13,7 +12,7 @@ draft: false
 
 {{< figure src="cluster.png" alt="DigiFiz digital dashboard" caption="The iconic DigiFiz design, recreated in software" >}}
 
-An open-source homage to the legendary VW DigiFiz—the factory-optional all-digital instrument cluster for Golf MK2 and Jetta MK2 (1986-1992). Bringing cutting-edge 80s futurism to modern vehicles.
+An open-source homage to the legendary VW DigiFiz—the factory-optional all-digital instrument cluster for Golf MK2 and Jetta MK2 (1986–1992). It brings cutting-edge ’80s futurism to modern vehicles.
 
 ## The Story
 
@@ -25,12 +24,12 @@ Now you can recreate that magic without the rarity, the cost, or the fragility o
 
 ## Key Features
 
-- **Segmented LED Typography** – Distinctive digital readout feeling with that authentic 80s aesthetic
+- **Segmented LED Typography** – Distinctive digital readouts with that authentic ’80s aesthetic
 - **Minimal, Purposeful Layout** – Speed, RPM, fuel, warnings—nothing else. Optimized for quick glances at highway speeds
-- **High Contrast Display** – No-nonsense presentation with premium, exclusive feel
+- **High Contrast Display** – No-nonsense presentation with a premium, exclusive feel
 - **Scene-Based Architecture** – Menu systems, splash screens, dashboard transitions with fade effects
 - **Component Composition** – Add gauges, warning lights, and displays by assembling building blocks
-- **Pluggable Input** – Support CAN-Bus (real vehicle data), keyboard (testing), or autonomous control modes
+- **Pluggable Input** – Support CAN bus (real vehicle data), keyboard (testing), or autonomous control modes
 - **Data-Driven Design** – Swap images and layouts without recompiling
 
 ### Example Usage
@@ -50,17 +49,17 @@ go run ./cli start --debug
 
 ## Architecture & Design
 
-Built on **Ebiten**, a 2D game library for Go, Digifiz leverages a complete rendering and input loop designed for games. This unconventional choice brings powerful benefits: smooth animations, efficient screen updates, scene transitions with fade effects, and a robust event system—all optimized for real-time graphics. The scene-based architecture treats the dashboard as a state machine, allowing seamless transitions between menu, splash, and dashboard screens without the complexity of traditional UI frameworks.
+Built on **Ebiten**, a 2D game library for Go, DigiFiz leverages a complete rendering and input loop designed for games. This unconventional choice brings powerful benefits: smooth animations, efficient screen updates, scene transitions with fade effects, and a robust event system—all optimized for real-time graphics. The scene-based architecture treats the dashboard as a state machine, allowing seamless transitions between menu, splash, and dashboard screens without the complexity of traditional UI frameworks.
 
 Component composition means you're never locked into a specific gauge or layout—swap, customize, and extend with ease. Dashboard scenes, lighting systems, and gauges all implement a unified `Component` interface, making it straightforward to add new visual elements.
 
 ### Target Hardware
 
-Digifiz is designed for the **Waveshare 12.3" 1920x720 LCD display**—a landscape ultrawide display perfectly proportioned for an instrument cluster. At 1920×720 pixels, it provides the same aspect ratio as classic multi-gauge dashboards while delivering modern clarity and color depth. Whether integrated into a classic restoration or a modern EV build, this display brings the DigiFiz aesthetic to life with sharp, responsive rendering.
+DigiFiz is designed for the **Waveshare 12.3" 1920×720 LCD display**—a landscape ultrawide display perfectly proportioned for an instrument cluster. At 1920×720 pixels, it provides the same aspect ratio as classic multi-gauge dashboards while delivering modern clarity and color depth. Whether integrated into a classic restoration or a modern EV build, this display brings the DigiFiz aesthetic to life with sharp, responsive rendering.
 
 ## Coding Patterns & Design
 
-Digifiz demonstrates several clean software patterns that keep the codebase maintainable and extensible:
+DigiFiz demonstrates several clean software patterns that keep the codebase maintainable and extensible:
 
 ### Component-Based Architecture
 
@@ -73,7 +72,7 @@ Component ├── Updatable (Update())
 
 All visual elements—gauges, lights, text, backgrounds—implement this interface. A `BaseComponent` provides common functionality (position, visibility, active state), allowing new components to compose rather than inherit.
 
-**Result**: Adding a new gauge or warning light is just implementing `Update()` and `Draw()`, then registering it with the Dashboard. No deep hierarchies, no tight coupling.
+**Result**: Adding a new gauge or warning light only requires implementing `Update()` and `Draw()`, then registering it with the Dashboard. No deep hierarchies, no tight coupling.
 
 ### Strategy Pattern for Input
 
@@ -97,7 +96,7 @@ Scenes manage their own state and receive shared context (vehicle data, config) 
 
 ## The Hackable Dashboard
 
-Digifiz's true power emerges when you connect it to real vehicle data. The architecture is intentionally designed for this:
+DigiFiz's true power emerges when you connect it to real vehicle data. The architecture is intentionally designed for this:
 
 - **CAN Bus Integration** – Plug in a `CANBusInput` source to read live vehicle telemetry. No dashboard code changes needed.
 - **Visual Mapping** – Define how CAN values (engine temp, oil pressure, battery voltage) map to gauge positions, light states, and text displays. Data-driven, not hardcoded.
