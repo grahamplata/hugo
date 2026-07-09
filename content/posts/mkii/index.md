@@ -13,7 +13,6 @@ _I plan to add many more._
 
 {{< figure src="1.JPG" alt="Toonami" caption="Toonami – My 1986 MK2 GTI" >}}
 
-
 ## Learnings
 
 ### **Just Buy the Bentley Manual**

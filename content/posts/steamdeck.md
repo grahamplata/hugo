@@ -20,7 +20,6 @@ A place for my findings and useful gists for the **Valve** _Steam Deck_.
   - [Resources](#resources)
 - [Xbox Cloud Gaming](#xbox-cloud-gaming)
   - [Installing Edge Browser](#installing-edge-browser)
-  - [Resources](#resources-1)
 
 ## Parsec
 
@@ -35,10 +34,11 @@ A place for my findings and useful gists for the **Valve** _Steam Deck_.
 ```bash
 wget -q https://www.emudeck.com/EmuDeck.desktop
 ```
-2. Now close Steam and run Steam ROM Manager when asked by the app.
-3. Click on Preview, then Generate App list, wait for all the images to download, and then click Save App list.
+
+1. Now close Steam and run Steam ROM Manager when asked by the app.
+2. Click on Preview, then Generate App list, wait for all the images to download, and then click Save App list.
    > The first run may take a few minutes. Check the Event Log tab to see when the process is finished.
-4. Close Steam ROM Manager and the installer window. Click on "Return to game mode" on your desktop, and you're good to go!
+3. Close Steam ROM Manager and the installer window. Click on "Return to game mode" on your desktop, and you're good to go!
 
 ## Resources
 
@@ -52,7 +52,7 @@ wget -q https://www.emudeck.com/EmuDeck.desktop
 
 Launch the Steam Deck into Desktop Mode from the **STEAM** button menu.
 
-```
+```shell
 Power > Switch to Desktop
 ```
 
@@ -82,8 +82,6 @@ wget -q --show-progress https://aka.ms/EdgeXboxDeckArt
 ```
 
 In Desktop Mode on your Steam Deck, launch Steam, navigate to Xbox Cloud Gaming (Beta) in your Library, right-click it, select Properties, and select the appropriate images.
-
-## Resources
 
 - [support.microsoft.com](https://support.microsoft.com/en-gb/topic/xbox-cloud-gaming-in-microsoft-edge-with-steam-deck-43dd011b-0ce8-4810-8302-965be6d53296) – Xbox Cloud Gaming in Microsoft Edge with Steam Deck
 - [flatpak](https://docs.flatpak.org/en/latest/introduction.html) – Flatpak is a framework for distributing desktop applications across various Linux distributions.
