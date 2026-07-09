@@ -1,9 +1,8 @@
 ---
-title: "Digifiz: Recreating the Legendary VW Digital Dashboard"
+title: "Digifiz - Recreating the Legendary VW Digital Dashboard"
 author: "Graham Plata"
 date: 2026-05-01
 type: "project"
-project_type: "software"
 description: "Open-source recreation of the iconic 1980s Volkswagen DigiFiz digital instrument cluster for modern vehicles"
 tags: ["volkswagen", "automotive", "retro-futurism", "open-source", "dashboard"]
 draft: false
