@@ -86,10 +86,6 @@ window = min(50 + floor(wait time / 10s) × 25, 200)
 
 The matchmaker scans a player's partition and chooses the closest opponent inside that player's current window, provided the opponent is also below the 150 ms ping ceiling.
 
-The useful design choice is that the window is not stored. It is a pure function of `JoinedAt` and the current time. A restarted engine or another replica derives the same radius without synchronizing mutable expansion state.
-
-The engine scans immediately when a player joins and scans every partition again on a ticker. The immediate path keeps the common case responsive; the ticker gives waiting players another chance after their windows expand. Join notifications are deliberately best-effort—if the local channel is full, Redis still contains the player and the next periodic scan will find them.
-
 ## Claiming a pair exactly once
 
 Selecting two compatible players is the easy part. Owning that decision is harder.
@@ -153,23 +149,6 @@ After a failure, the engine attempts to deprovision using the match ID and then 
 There is still one worse case: the engine can crash after claiming players or allocating a server. Claimed players are indexed by claim time. On each tick, another engine can find claims older than the formation timeout, atomically acquire recovery ownership, deprovision by claim ID, and return the players to the queue.
 
 Recovery ownership matters because a slow original worker could wake up while another replica is cleaning up. Moving entries from `claimed` to `recovering` fences the original worker from finalizing the same claim.
-
-## Surviving client disconnects
-
-A dropped connection should not immediately throw away a player's place. Mobile networks change, Wi-Fi blips, processes restart, and load balancers close streams.
-
-On a fresh join, Goldilocks uses `SET NX` to create a session token. The token is both a reconnect credential and an atomic mutex preventing two fresh streams from queuing the same player. A reconnect presents that token and resumes the existing queue entry without changing `JoinedAt`, so the player keeps both their place and their expanded MMR window.
-
-Every stream also receives a unique attachment ID. Disconnect handling only updates the queue entry when that attachment ID is still current. This fences an old stream from marking a newer replacement stream as disconnected.
-
-When a stream disappears, the player remains matchable during a 30-second grace period:
-
-- If the player reconnects, the disconnect marker is cleared.
-- If a match forms, the result is buffered for reconnect.
-- If the grace period expires, the engine removes the player.
-- If the client explicitly cancels, removal is immediate.
-
-This is the part of the project that made the queue feel like a distributed system rather than an algorithm exercise. Most of the complexity lives in transitions between joined, attached, disconnected, claimed, recovering, and finalized—not in comparing two MMR values.
 
 ## Running it locally
 
