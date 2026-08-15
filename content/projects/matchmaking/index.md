@@ -8,20 +8,18 @@ tags: ["code", "games", "go", "distributed-systems"]
 draft: true
 ---
 
-Matchmaking looks simple from the outside: a player presses **Play**, waits for a moment, and lands in a game. _(Dota for me)_ Behind the button press is a system balancing several competing goals. Matches should be fair, wait times should be short, and two workers should never place the same player into different games.
+Matchmaking looks simple from the outside: a player presses **Play**, waits for a moment, and lands in a game. _(Dota for me)_ Behind the button press is a system balancing several competing goals. Matches should be fair, wait times should be short, and never place the same player into different games.
 
 [Goldilocks](https://github.com/grahamplata/goldilocks) is my attempt to build that system from first principles. It is a 1v1 matchmaking service written in Go using Connect RPC and Redis. The name comes from the central tension in matchmaking: the acceptable skill range cannot be too narrow or too broad. It has to be _just right_.
 
-## Start with one complete match
+## Start with one match
 
-The first version is intentionally constrained. A match has two players. Each player queues for one game mode and region with a matchmaking rating (MMR) and measured ping. The service must find a compatible opponent, provision a game server, and deliver the result to both clients.
-
-Those limits remove team composition, parties, roles, and backfill from the problem. They do not remove the distributed-systems problems. Players still disconnect, requests still race, workers still crash, and external provisioning can still fail after partially succeeding.
+I am approaching this intentionally constrained. A match has two players. Each player queues for one game mode and region with a matchmaking rating (MMR) and measured ping. The service must find a compatible opponent, provision a game server, and send the result to the player's clients.
 
 The resulting flow is:
 
 ```diagram
-┌────────┐  Connect RPC  ┌─────────┐   notify   ┌────────────┐
+┌────────┐  ConnectRPC   ┌─────────┐   notify   ┌────────────┐
 │ Client │──────────────▶│ Handler │───────────▶│ Matchmaker │
 └───▲────┘               └────┬────┘            └─────┬──────┘
     │ MatchFound              │                       │
@@ -31,21 +29,17 @@ The resulting flow is:
                          └─────────┘           └─────────────┘
 ```
 
-The handler owns the client session, the matchmaker owns pairing, Redis owns durable coordination, and the provisioner hides the details of allocating a game server.
+The handler is in charge of the client session, matchmaker pairing, Redis owns coordination, and the provisioner allocates a game server.
 
 ## One stream for the queue lifecycle
 
-Goldilocks exposes one bidirectional streaming RPC named `Queue`. The first client message is a join request containing:
-
-```text
-player ID · MMR · game mode · region · ping · optional rejoin token
-```
+We expose a bidirectional streaming RPC named `Queue`. The first client message is a join request containing: `player id`, `mmr`, `mode`, `region`, `ping`, and an optional `rejoin token`.
 
 The server acknowledges the join with a session token. The client then keeps the stream alive with heartbeats while it waits. The same stream carries cancellation requests in one direction and the eventual `MatchFound` event in the other.
 
 ```diagram
 ┌────────┐                              ┌─────────────┐
-│ Client │                              │ Goldilocks │
+│ Client │                              │ Goldilocks  │
 └───┬────┘                              └──────┬──────┘
     │ Join(player, MMR, mode, region)          │
     │─────────────────────────────────────────▶│
@@ -56,8 +50,6 @@ The server acknowledges the join with a session token. The client then keeps the
     │ MatchFound(match, server, opponent)      │
     │◀─────────────────────────────────────────│
 ```
-
-A long-lived stream fits the problem well. The server can detect silence, the client does not need to poll, and a match can be delivered immediately. It also forces connection loss to be treated as a normal state instead of an exceptional afterthought.
 
 ## Redis is the coordination layer
 
@@ -80,9 +72,7 @@ queue-meta:<player-id>
 └── state
 ```
 
-The queue entry has a time-to-live that is refreshed by heartbeats. This acts as a liveness lease. If metadata expires while a player ID remains in a sorted set, the engine recognizes the orphaned member and removes it on its next scan.
-
-Redis is doing more than persisting a list. Its atomic operations and Lua scripts are the synchronization boundary between handler goroutines and multiple matchmaker replicas.
+The queue entry has a ttl that is refreshed by heartbeats. If metadata expires while a player ID remains in a sorted set, we remove the orphaned member on its next scan.
 
 ## The expanding window
 
@@ -198,16 +188,3 @@ In another terminal:
 ```
 
 The simulator creates fake clients with incrementing MMR values. Each opens a queue stream, sends heartbeats, waits for a match, and reports its opponent, server address, and total wait.
-
-## What I want to build next
-
-The current service proves the complete 1v1 lifecycle, including several races and recovery paths. The next steps are less about adding matching rules and more about making the system observable and connecting it to real infrastructure:
-
-- Implement the Kubernetes provisioner, potentially using Agones.
-- Emit queue depth, wait-time, MMR-difference, claim-conflict, and recovery metrics.
-- Add a larger simulation that charts the tradeoff between match quality and wait time.
-- Exercise process crashes and Redis failures in integration tests.
-- Decide whether mutual window compatibility should be required as the search expands.
-- Explore parties and team formation only after the 1v1 behavior is measurable.
-
-Goldilocks started as a question about pairing two players. The more interesting answer has been about ownership: who owns a session, who owns a pair, who owns cleanup, and how the next process can safely continue when an owner disappears.

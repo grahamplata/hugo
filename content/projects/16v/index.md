@@ -4,34 +4,49 @@ author: "Graham Plata"
 date: 2026-07-10
 type: "project"
 description: "Turning fuel into noise!"
-tags: ["volkswagen", "automotive"]
+tags: ["volkswagen", "automotive", "engine-build"]
 draft: true
 ---
 
 ![16v x2](16v.jpg)
-
 > Two blocks of Aspirational Horse Power provided by [@thomas_and_a_vw](https://www.instagram.com/thomas_and_a_vw/)
 
-## Context
+## Overview
 
-I do not come from a mechanical background but I have always wanted to "build" an engine.
+Building a 9A 16v with modern fuel management and individual throttle bodies. The goal is maximizing NA sound while keeping the build relatively simple and the driving experience fun. CIS-E out, EFI + ITBs in.
 
-## Tenets
+## Bill of Materials
 
-Core principles to follow while tackling this build. The intention is to short circuit tough decisions by having these as guides.
+| Item | Status | Cost | Notes |
+| ------ | -------- | ------ | ------- |
+| VW 9A 16v 2.0 16v | Have | $300.00 | |
+| Jenvey ITB Kit | Order | TBD | |
+| Standalone ECU - MicroSquirt | Order | $379.99 | |
+| High-flow fuel pump | | TBD | External pump setup |
+| Fuel injectors (330cc) | | TBD | |
+| Fuel pressure regulator | | TBD | |
+| VW 02J transmission | | TBD | Source used |
+| Exhaust header | Have | TBD | |
+| Engine wiring harness | | TBD | |
+| Fuel lines & fittings | | TBD | |
+| Air filter & intake plumbing | | $0.00 | |
 
-### Learn
+## Build Log
 
-Take the time to fully understand what we are trying to accomplish and not don't rush to simply complete.
+### 2026-07-12 – Motor Acquired
 
-### Be opinionated
+- Picked up the 9A block from [@thomas_and_a_vw](https://www.instagram.com/thomas_and_a_vw/) at **Mk1 Madness 2026**
 
-### Produce Artifacts
+### 2026-07-XX – TBD
 
-## Theoretical Parts list
-
-1. [Jenvey VW Individual Throttle Body kit](https://www.jenvey.co.uk/throttle-body-kits/vw/volkswagen-dth-kit-ckvw01-kit)
-2. [VW 02J transmission](#)
-3. [CAE Shifter VW Golf](https://cae-racing.com/en/short-shifter/vw/10004hd_02a)
+- Placeholder
 
 ## Resources
+
+- [Jenvey Throttle Body Kits](https://www.jenvey.co.uk/throttle-body-kits/vw/)
+- [CAE Racing Short Shifters](https://cae-racing.com/en/short-shifter/)
+
+## Notes
+
+- **This is a living document**. Updates will be added as the build progresses.
+- **Questions/gotchas**: TBD as they emerge.
