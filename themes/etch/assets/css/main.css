@@ -1,16 +1,40 @@
+:root {
+    --color-bg: #ffffff;
+    --color-bg-alt: #f4f4f4;
+    --color-text: #313a3d;
+    --color-text-brand: #313a3d;
+    --color-text-nav: #454545;
+    --color-text-body: #394548;
+    --color-text-secondary: #767676;
+    --color-text-toc-heading: #3d3d3d;
+    --color-link: #007dfa;
+    --color-link-hover: #369aff;
+    --color-border: #d8d8d8;
+    --color-border-subtle: #e2e2e2;
+    --color-border-strong: #b1b1b1;
+    --color-border-quote: #cccccc;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
 
 html {
     font-size: 62.5%;
+    scrollbar-color: var(--color-border-strong) var(--color-bg-alt);
+}
+
+::selection {
+    background: var(--color-link);
+    color: var(--color-bg);
 }
 
 body {
     font-size: 16px;
     font-size: 1.6rem;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: #313a3d;
+    color: var(--color-text);
+    background: var(--color-bg);
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
@@ -23,7 +47,7 @@ header#banner {
 }
 
 header#banner a {
-    color: #313a3d;
+    color: var(--color-text-brand);
     text-decoration: none;
 }
 
@@ -56,16 +80,22 @@ header#banner nav ul li {
 }
 
 header#banner nav ul li a {
-    color: #454545;
+    color: var(--color-text-nav);
 }
 
 main#content a {
-    color: #007dfa;
+    color: var(--color-link);
     text-decoration: none;
+    text-underline-offset: 2px;
 }
 
 main#content a:hover {
     text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
 }
 
 main#content h1,
@@ -75,12 +105,12 @@ main#content h4,
 main#content h5,
 main#content h6 {
     margin-bottom: 0;
-    line-height: 1.15;
+    line-height: 1.3;
 }
 
 main#content h3 {
-    font-size: 19px;
-    font-size: 1.9rem;
+    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 main#content h1 + p,
@@ -93,14 +123,25 @@ main#content h6 + p {
 }
 
 main#content p {
-    color: #394548;
+    color: var(--color-text-body);
     margin: 16px 0;
+}
+
+main#content .description {
+    color: var(--color-text-secondary);
+    font-size: 0.92em;
+    margin: 4px 0 0;
+}
+
+main#content h3 .project-type,
+main#content h3 .language {
+    margin-left: 10px;
 }
 
 main#content hr {
     height: 1px;
     border: 0;
-    background: #d8d8d8;
+    background: var(--color-border);
 }
 
 main#content abbr {
@@ -123,7 +164,7 @@ main#content ul#posts li {
 
 main#content ul#posts small {
     font-size: 0.8em;
-    color: #767676;
+    color: var(--color-text-secondary);
     margin-left: 10px;
 }
 
@@ -132,11 +173,15 @@ main#content ul#posts li a {
 }
 
 main#content ul#posts li a:hover {
-    color: #369aff;
+    color: var(--color-link-hover);
 }
 
 main#content ul#posts li a:hover small {
     color: inherit;
+}
+
+main#content ul#posts li .meta-label {
+    margin-left: 10px;
 }
 
 /* single.html styles */
@@ -151,11 +196,38 @@ main#content header#post-header h1 {
 main#content header#post-header > div {
     display: block;
     font-size: 0.85em;
-    color: #767676;
+    color: var(--color-text-secondary);
+}
+
+.meta-label {
+    font-size: 0.8em;
+    font-weight: normal;
+    color: var(--color-text-secondary);
+}
+
+main#content footer#post-tags {
+    font-size: 0.85em;
+    color: var(--color-text-secondary);
+    margin-top: 24px;
+}
+
+main#content footer#post-tags ul {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main#content footer#post-tags li {
+    display: inline;
+}
+
+main#content footer#post-tags li + li:before {
+    content: ", ";
 }
 
 main#content #toc {
-    border: 1px solid #b1b1b1;
+    border: 1px solid var(--color-border-strong);
     border-radius: 1px;
     line-height: 26px;
     margin: 16px 0;
@@ -164,7 +236,7 @@ main#content #toc {
 
 main#content #toc h4 {
     font-size: 1.06em;
-    color: #3d3d3d;
+    color: var(--color-text-toc-heading);
     margin: 0;
 }
 
@@ -201,6 +273,7 @@ main#content #toc ol li:before {
 
 main#content img {
     max-width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -211,6 +284,7 @@ main#content figure {
 main#content figure img {
     display: block;
     max-width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -241,7 +315,7 @@ main#content blockquote {
     margin-bottom: 10px;
     margin-left: 50px;
     padding-left: 15px;
-    border-left: 3px solid #ccc;
+    border-left: 3px solid var(--color-border-quote);
 }
 
 main#content code,
@@ -276,22 +350,23 @@ main#content table {
     border-collapse: collapse;
     margin: 20px 0;
     font-size: 0.92em;
+    font-variant-numeric: tabular-nums;
 }
 
 main#content th,
 main#content td {
     padding: 8px 14px;
     text-align: left;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 main#content th {
     font-weight: 600;
-    border-bottom: 2px solid #b1b1b1;
+    border-bottom: 2px solid var(--color-border-strong);
 }
 
 main#content tbody tr:nth-child(even) {
-    background: #f4f4f4;
+    background: var(--color-bg-alt);
 }
 
 main#content .footnotes {
@@ -302,6 +377,6 @@ footer#footer {
     font-size: 14px;
     font-size: 1.4rem;
     font-weight: 400;
-    color: #b3b3b3;
+    color: var(--color-text-secondary);
     margin: 40px 0;
 }

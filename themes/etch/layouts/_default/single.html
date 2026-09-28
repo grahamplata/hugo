@@ -13,5 +13,11 @@
         </div>
     </header>
     {{- .Content -}}
+    {{- with .GetTerms "tags" -}}
+    <footer id="post-tags">
+        Tagged:
+        <ul>{{- range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{- end }}</ul>
+    </footer>
+    {{- end -}}
 </article>
 {{ end }}

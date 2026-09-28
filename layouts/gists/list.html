@@ -1,17 +1,19 @@
 {{- define "main" -}}
-<main>
+<div>
     <div class="posts">
         {{- range .Data.Pages -}}
         <article>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{- if .Params.language }}
+                <span class="language meta-label">{{ .Params.language }}</span>
+                {{- end }}
+            </h3>
             {{- if .Description }}
             <p class="description">{{ .Description }}</p>
-            {{- end }}
-            {{- if .Params.language }}
-            <span class="language">{{ .Params.language }}</span>
             {{- end }}
         </article>
         {{- end }}
     </div>
-</main>
+</div>
 {{- end }}

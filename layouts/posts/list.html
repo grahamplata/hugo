@@ -1,5 +1,5 @@
 {{- define "main" -}}
-<main>
+<div>
     <h3>Posts</h3>
     <div class="posts-by-year">
         {{- range (.Data.Pages.GroupByDate "2006") -}}
@@ -13,5 +13,5 @@
         </section>
         {{- end -}}
     </div>
-</main>
+</div>
 {{- end -}}
