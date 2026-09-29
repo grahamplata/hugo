@@ -7,11 +7,11 @@
     <li>
     <a href="{{ .Permalink }}">{{ .Title }}</a>
     <small><time>{{ .Date | time.Format (i18n "posts.date") }}</time></small>
-    <br>
-    </li>
     {{- if .Description }}
-    <small class="post-description">{{ .Description | truncate 120 }}</small>
+    <br>
+    <small class="description">{{ .Description | truncate 120 }}</small>
     {{- end }}
+    </li>
     {{- end }}
 </ul>
 {{ end }}

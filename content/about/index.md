@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-{{< figure src="6.JPG" alt="Toonami">}}
+{{< figure src="6.JPG" alt="A hand-drawn sketch of a Volkswagen Rabbit next to a green VW keychain">}}
 
 ## Hey, I'm Graham
 
