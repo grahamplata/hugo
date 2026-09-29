@@ -2,18 +2,18 @@
 {{- $alt := .Get "alt" -}}
 {{- $caption := .Get "caption" -}}
 {{- $class := .Get "class" -}}
-{{- $width := .Get "width" -}}
-{{- $height := .Get "height" -}}
 {{- $loading := .Get "loading" | default "lazy" -}}
 
 {{- $image := .Page.Resources.GetMatch $src -}}
 {{- if $image -}}
   {{- $resized := $image.Resize "800x jpeg q80" -}}
+  {{- $width := .Get "width" | default $resized.Width -}}
+  {{- $height := .Get "height" | default $resized.Height -}}
   <figure{{ with $class }} class="{{ . }}"{{ end }}>
     <img src="{{ $resized.RelPermalink }}"
          alt="{{ $alt }}"
-         {{ with $width }}width="{{ . }}"{{ end }}
-         {{ with $height }}height="{{ . }}"{{ end }}
+         width="{{ $width }}"
+         height="{{ $height }}"
          loading="{{ $loading }}"
          decoding="async">
     {{- if $caption -}}
@@ -24,8 +24,8 @@
   {{- warnf "Image not found: %s in page %s" $src .Page.RelPermalink -}}
   <figure{{ with $class }} class="{{ . }}"{{ end }}>
     <img src="{{ $src }}" alt="{{ $alt }}"
-         {{ with $width }}width="{{ . }}"{{ end }}
-         {{ with $height }}height="{{ . }}"{{ end }}
+         {{ with .Get "width" }}width="{{ . }}"{{ end }}
+         {{ with .Get "height" }}height="{{ . }}"{{ end }}
          loading="{{ $loading }}"
          decoding="async">
     {{- if $caption -}}

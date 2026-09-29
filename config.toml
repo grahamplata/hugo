@@ -3,7 +3,6 @@ baseURL = "/"
 locale = "en-US"
 title = "Graham Plata"
 theme = "etch"
-googleAnalytics = "UA-11254643-2"
 enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true

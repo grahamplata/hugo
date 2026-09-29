@@ -7,7 +7,7 @@ tags: ["travel", "cars", "photography"]
 draft: false
 ---
 
-{{< figure src="GRP_6076_preview.jpeg" alt="Wookies in the Woods" caption="Route 129" >}}
+{{< figure src="GRP_6076_preview.jpeg" alt="A car on US 129, the Tail of the Dragon, winding through the mountains" caption="Route 129" >}}
 
 ## Overview
 
@@ -15,13 +15,13 @@ Wookies in the Woods is an annual gathering of VW R32 and Golf R owners centered
 
 ## The Drive
 
-{{< figure src="GRP_6099_preview.jpeg" alt="Wookies in the Woods" caption="Stay between Mayo & Mustard" >}}
+{{< figure src="GRP_6099_preview.jpeg" alt="A car navigating a tight curve on the Dragon's 318 turns" caption="Stay between Mayo & Mustard" >}}
 
 The road is best described as a technical, twisty, and scenic drive through the mountains. It demands your full attention as there are no shoulders and the road is narrow. Flowing through the curves is a rewarding experience, but it's not a road for pushing your limits. I definitely try to stay well under my limits and focus on carrying a rhythm through the curves.
 
 ## What to Bring
 
-{{< figure src="L1000148_preview.jpeg" alt="Wookies in the Woods" caption="Replacing a fuel pump" >}}
+{{< figure src="L1000148_preview.jpeg" alt="Roadside repair replacing a fuel pump on the trip" caption="Replacing a fuel pump" >}}
 
 ### Vehicle
 
@@ -59,14 +59,14 @@ Driving from central Pennsylvania to the Dragon is a long haul. At about 9–10 
 
 > Jurassic Park was a great listen.
 
-{{< figure src="IMG_5295.jpg" alt="Wookies in the Woods" caption="Pilgrimage to Buc-ee's for Beaver Nuggets and clean bathrooms." >}}
+{{< figure src="IMG_5295.jpg" alt="A stop at a Buc-ee's travel center during the drive down" caption="Pilgrimage to Buc-ee's for Beaver Nuggets and clean bathrooms." >}}
 
 ## The Event
 
 Drive. Just drive. It's one of the best scenic mountain drives I've ever done. Every road is different, with new challenges and rewards.
 
-{{< figure src="L1000187_preview.jpeg" alt="Wookies in the Woods" caption="Fontana Dam" >}}
+{{< figure src="L1000187_preview.jpeg" alt="A wide view of Fontana Dam from the road" caption="Fontana Dam" >}}
 
-{{< figure src="L1000189_preview.jpeg" alt="Wookies in the Woods" caption="Fontana Dam" >}}
+{{< figure src="L1000189_preview.jpeg" alt="A closer view of Fontana Dam's structure" caption="Fontana Dam" >}}
 
-{{< figure src="GRP_6271_preview.jpeg" alt="Wookies in the Woods" caption="Fontana Lake" >}}
+{{< figure src="GRP_6271_preview.jpeg" alt="Fontana Lake seen from the mountains" caption="Fontana Lake" >}}

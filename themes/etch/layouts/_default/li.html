@@ -1,0 +1,9 @@
+<li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    {{- if not .Date.IsZero }}
+    <small><time>{{ .Date | time.Format (i18n "posts.date") }}</time></small>
+    {{- end }}
+    {{- if .Description }}
+    <small class="description">{{ .Description | truncate 120 }}</small>
+    {{- end }}
+</li>

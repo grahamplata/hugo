@@ -1,17 +1,17 @@
 {{ define "main" }}
 {{ .Content }}
-<h3>Posts</h3>
-<div class="posts-by-year">
-    {{- $posts := where site.RegularPages "Type" "posts" -}}
-    {{- range ($posts.GroupByDate "2006") -}}
-    <section class="posts-year">
-        <h4>{{ .Key }}</h4>
-        <ul id="posts">
-            {{- range .Pages -}}
-            {{ .Render "li" }}
-            {{- end -}}
-        </ul>
-    </section>
-    {{- end -}}
-</div>
+<h3>Recent</h3>
+<ul id="posts" class="recent">
+    {{- $recent := (where site.RegularPages "Section" "in" (slice "posts" "projects")).ByDate.Reverse | first 6 -}}
+    {{- range $recent }}
+    <li>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <small><time>{{ .Date | time.Format (i18n "posts.date") }}</time></small>
+    {{- if .Description }}
+    <br>
+    <small class="description">{{ .Description | truncate 120 }}</small>
+    {{- end }}
+    </li>
+    {{- end }}
+</ul>
 {{ end }}
