@@ -15,10 +15,8 @@ staticDir = ["static"]
 # Image processing settings
 [imaging]
 resampleFilter = "lanczos"
-quality = 85
 anchor = "smart"
 bgColor = "#ffffff"
-hint = "photo"
 # Enable EXIF data processing
 exif.disableDate = false
 exif.disableLatLong = false
@@ -28,6 +26,7 @@ exif.excludeFields = "GPS"
 [imaging.formats]
 [imaging.formats.webp]
 quality = 85
+hint = "photo"
 lossless = false
 [imaging.formats.jpeg]
 quality = 85
