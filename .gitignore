@@ -4,3 +4,8 @@
 # Ignore Build folder
 public/
 _gen/
+
+# impeccable
+.impeccable
+PRODUCT.md
+DESIGN.md

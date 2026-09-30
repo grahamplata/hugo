@@ -1,6 +1,11 @@
-<li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+<li class="parts-row">
+    <a class="parts-row-link" href="{{ .Permalink }}">
+        <span class="parts-title">{{ .Title }}</span>
+        <span class="parts-leader" aria-hidden="true"></span>
+        <span class="parts-meta">{{ .Date.Format "Jan 2" }}</span>
+        <svg class="parts-go" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg>
+    </a>
     {{- if .Description }}
-    <small class="post-description">{{ .Description | truncate 120 }}</small>
+    <small class="parts-description">{{ .Description | truncate 120 }}</small>
     {{- end }}
 </li>

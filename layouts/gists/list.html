@@ -1,17 +1,19 @@
 {{- define "main" -}}
-<main>
-    <div class="posts">
-        {{- range .Data.Pages -}}
-        <article>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{- if .Description }}
-            <p class="description">{{ .Description }}</p>
-            {{- end }}
-            {{- if .Params.language }}
-            <span class="language">{{ .Params.language }}</span>
-            {{- end }}
-        </article>
+<h1 class="section-heading">Gists</h1>
+{{ .Content }}
+<ul class="parts-list">
+    {{- range .Data.Pages.ByDate.Reverse -}}
+    <li class="parts-row">
+        <a class="parts-row-link" href="{{ .RelPermalink }}">
+            <span class="parts-title">{{ .Title }}</span>
+            <span class="parts-leader" aria-hidden="true"></span>
+            {{- with .Params.language }}<span class="chip">{{ . }}</span>{{- end }}
+            <svg class="parts-go" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3l5 5-5 5"></path></svg>
+        </a>
+        {{- if .Description }}
+        <small class="parts-description">{{ .Description }}</small>
         {{- end }}
-    </div>
-</main>
-{{- end }}
+    </li>
+    {{- end -}}
+</ul>
+{{- end -}}
