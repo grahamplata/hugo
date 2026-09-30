@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{ .Content }}
-<h3>Posts</h3>
+<h2 class="section-heading">Posts</h2>
 <div class="posts-by-year">
     {{- $posts := where site.RegularPages "Type" "posts" -}}
     {{- range ($posts.GroupByDate "2006") -}}
     <section class="posts-year">
-        <h4>{{ .Key }}</h4>
-        <ul id="posts">
+        <h3 class="year-heading">{{ .Key }}</h3>
+        <ul class="parts-list">
             {{- range .Pages -}}
             {{ .Render "li" }}
             {{- end -}}

@@ -1,0 +1,8 @@
+name = "Genuine Parts"
+license = "MIT"
+description = "A workshop-manual theme: aged kraft stock, stamped part numbers, rust-orange and cobalt ink."
+homepage = "https://grahamplata.com"
+min_version = "0.100.0"
+
+[author]
+  name = "Graham Plata"

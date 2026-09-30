@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="wrap">
+    {{ partial "masthead.html" . }}
+    <main class="prose">
+      <h1>Part not found</h1>
+      <p>This page doesn't exist, or it's been superseded. <a href="{{ "/" | absURL }}">Back to the index</a>.</p>
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+</html>

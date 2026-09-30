@@ -2,4 +2,4 @@
 title: "Home"
 ---
 
-Welcome to my digital sandbox.
+I build infrastructure and platforms that help engineers move fast at [Degreed](https://www.degreed.com/).

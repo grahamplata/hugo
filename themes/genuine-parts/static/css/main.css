@@ -1,0 +1,529 @@
+/* ==========================================================================
+   Genuine Parts — a workshop-manual theme
+   Aged kraft stock, stamped part numbers, rust-orange and cobalt ink.
+   ========================================================================== */
+
+:root {
+  --bg: hsl(34.7 51.4% 93.7%);
+  --bg-deep: #c9b078;
+  /* Card reuses the original kraft-label tone: the page is plain paper,
+     cards read as an actual parts label pasted onto it. */
+  --card: #dcc596;
+  --toggle-bg: var(--card);
+  --ink: #1c140b;
+  --ink-muted: #5b4c34;
+  --rust: #a84a26;
+  --rust-ink: #6e3315;
+  --rust-soft: rgba(168, 74, 38, 0.14);
+  --cobalt: #1f3d72;
+  --cobalt-ink: #12294f;
+  --cobalt-soft: rgba(31, 61, 114, 0.12);
+  --line: rgba(28, 20, 11, 0.24);
+  --line-soft: rgba(28, 20, 11, 0.14);
+  --shadow: rgba(20, 14, 6, 0.28);
+  --selection-bg: var(--rust);
+  --selection-ink: #f6ecd6;
+
+  --font-display: "Zilla Slab", Georgia, "Times New Roman", serif;
+  --font-body: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+
+  --measure: 680px;
+  --gutter: clamp(20px, 5vw, 40px);
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a140c;
+  --bg-deep: #120d07;
+  --card: #2c2013;
+  --toggle-bg: #4a3822;
+  --ink: #ecdfc2;
+  --ink-muted: #b6a67c;
+  --rust: #e0824f;
+  --rust-ink: #f3a476;
+  --rust-soft: rgba(224, 130, 79, 0.16);
+  --cobalt: #7fa0e0;
+  --cobalt-ink: #a3c0ee;
+  --cobalt-soft: rgba(127, 160, 224, 0.16);
+  --line: rgba(236, 223, 194, 0.2);
+  --line-soft: rgba(236, 223, 194, 0.12);
+  --shadow: rgba(0, 0, 0, 0.55);
+  --selection-bg: var(--rust);
+  --selection-ink: #1a140c;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a140c;
+    --bg-deep: #120d07;
+    --card: #2c2013;
+    --toggle-bg: #4a3822;
+    --ink: #ecdfc2;
+    --ink-muted: #b6a67c;
+    --rust: #e0824f;
+    --rust-ink: #f3a476;
+    --rust-soft: rgba(224, 130, 79, 0.16);
+    --cobalt: #7fa0e0;
+    --cobalt-ink: #a3c0ee;
+    --cobalt-soft: rgba(127, 160, 224, 0.16);
+    --line: rgba(236, 223, 194, 0.2);
+    --line-soft: rgba(236, 223, 194, 0.12);
+    --shadow: rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reset & ground
+   -------------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+html, body {
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  position: relative;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Paper grain rides on its own fixed layer, never in body's own
+   background-image list, so contrast tooling reads body against its
+   plain solid color instead of falling back to an analytic gradient
+   approximation. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Layered to read as handled, uneven kraft stock rather than a flat
+     digital tile: a soft sheen, a few faint stains/foxing blotches at
+     irregular sizes and positions, then fine paper-fiber grain on top. */
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.05), transparent 45%),
+    radial-gradient(ellipse 620px 420px at 8% 92%, rgba(122, 55, 23, 0.055), transparent 60%),
+    radial-gradient(ellipse 480px 340px at 88% 8%, rgba(28, 20, 11, 0.045), transparent 58%),
+    radial-gradient(ellipse 700px 520px at 55% 68%, rgba(28, 20, 11, 0.03), transparent 62%),
+    radial-gradient(ellipse 360px 260px at 30% 40%, rgba(122, 55, 23, 0.03), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: auto, auto, auto, auto, auto, 220px 220px;
+}
+
+:root[data-theme="dark"] body::before {
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.03), transparent 45%),
+    radial-gradient(ellipse 620px 420px at 8% 92%, rgba(224, 130, 79, 0.05), transparent 60%),
+    radial-gradient(ellipse 480px 340px at 88% 8%, rgba(0, 0, 0, 0.35), transparent 58%),
+    radial-gradient(ellipse 700px 520px at 55% 68%, rgba(0, 0, 0, 0.25), transparent 62%),
+    radial-gradient(ellipse 360px 260px at 30% 40%, rgba(224, 130, 79, 0.03), transparent 55%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body::before {
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.03), transparent 45%),
+      radial-gradient(ellipse 620px 420px at 8% 92%, rgba(224, 130, 79, 0.05), transparent 60%),
+      radial-gradient(ellipse 480px 340px at 88% 8%, rgba(0, 0, 0, 0.35), transparent 58%),
+      radial-gradient(ellipse 700px 520px at 55% 68%, rgba(0, 0, 0, 0.25), transparent 62%),
+      radial-gradient(ellipse 360px 260px at 30% 40%, rgba(224, 130, 79, 0.03), transparent 55%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-ink);
+}
+
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ink-muted); }
+* { scrollbar-color: var(--line) var(--bg); scrollbar-width: thin; }
+
+a {
+  color: var(--cobalt);
+  text-decoration-color: var(--cobalt-soft);
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+p { margin: 0 0 1.1em; }
+
+/* --------------------------------------------------------------------------
+   Page frame
+   -------------------------------------------------------------------------- */
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 96px;
+}
+
+/* --------------------------------------------------------------------------
+   Masthead
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  padding-top: clamp(48px, 8vw, 72px);
+  padding-bottom: 8px;
+}
+
+.masthead-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.masthead-name {
+  font-size: 30px;
+  margin: 0;
+}
+
+.masthead-name a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.masthead-role {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: var(--rust-ink);
+  font-weight: 600;
+}
+
+.theme-toggle {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--toggle-bg);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: border-color 150ms ease, transform 150ms ease;
+}
+
+.theme-toggle:hover { border-color: var(--rust); }
+.theme-toggle:active { transform: scale(0.94); }
+.theme-toggle svg { width: 18px; height: 18px; display: block; }
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+nav.site-nav {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+nav.site-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  text-decoration: underline dotted;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+  padding: 2px 0;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a[aria-current="page"] {
+  color: var(--rust-ink);
+  text-decoration-color: var(--rust);
+}
+
+/* --------------------------------------------------------------------------
+   Prose (bio, post/project/about body copy)
+   -------------------------------------------------------------------------- */
+
+.prose {
+  font-size: 17px;
+}
+
+.prose a { text-underline-offset: 3px; }
+
+.prose > p:first-of-type { font-size: 1.05em; }
+
+.prose h2 { font-size: 24px; margin-top: 1.8em; }
+.prose h3 { font-size: 19px; margin-top: 1.5em; }
+
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li { margin-bottom: 0.4em; }
+
+.prose blockquote {
+  margin: 1.8em 0;
+  padding: 10px 4px;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  padding: 0.12em 0.4em;
+}
+
+.prose pre {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px 18px;
+  overflow-x: auto;
+  box-shadow: 0 6px 18px -12px var(--shadow);
+}
+
+.prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.86em;
+  line-height: 1.55;
+}
+
+.prose .highlight {
+  margin: 1.6em 0;
+}
+
+.prose .highlight pre {
+  margin: 0;
+}
+
+.prose img { max-width: 100%; height: auto; border-radius: 6px; }
+
+.prose figure { margin: 1.8em 0; }
+.prose figcaption {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-muted);
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px dashed var(--line);
+  margin: 2.4em 0;
+}
+
+/* --------------------------------------------------------------------------
+   Section headings
+   -------------------------------------------------------------------------- */
+
+.section-heading {
+  font-size: 20px;
+  margin-top: 2.4em;
+  margin-bottom: 0.6em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.year-heading {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  margin: 2em 0 0.6em;
+}
+
+/* --------------------------------------------------------------------------
+   Parts list — dotted-leader rows for posts, projects, gists
+   -------------------------------------------------------------------------- */
+
+ul.parts-list {
+  list-style: none;
+  margin: 0 0 0.4em;
+  padding: 0;
+}
+
+.parts-row {
+  display: block;
+}
+
+.parts-row + .parts-row { margin-top: 2px; }
+
+.parts-row-link {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 6px;
+  margin: 0 -6px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.parts-row-link:hover,
+.parts-row-link:focus-visible {
+  background: var(--rust-soft);
+}
+
+.parts-title {
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parts-leader {
+  flex: 1 1 auto;
+  min-width: 16px;
+  border-bottom: 1px dotted var(--ink-muted);
+  opacity: 0.55;
+  transform: translateY(-4px);
+}
+
+.parts-meta {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.parts-row-link:hover .parts-meta,
+.parts-row-link:focus-visible .parts-meta {
+  color: var(--rust-ink);
+}
+
+.parts-go {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  color: var(--rust);
+}
+
+.parts-row-link:hover .parts-go,
+.parts-row-link:focus-visible .parts-go {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.parts-description {
+  display: block;
+  font-size: 13.5px;
+  color: var(--ink-muted);
+  margin: 2px 6px 0;
+}
+
+.parts-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--cobalt-ink);
+  background: var(--cobalt-soft);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 8px;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parts-go { transition: none; }
+}
+
+@media (max-width: 480px) {
+  .parts-row-link { flex-wrap: wrap; row-gap: 2px; }
+  .parts-title { white-space: normal; flex: 1 1 100%; }
+  .parts-leader { display: none; }
+  .parts-meta { flex: 1 1 auto; font-size: 11.5px; }
+  .parts-go { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Bio card / about
+   -------------------------------------------------------------------------- */
+
+.stamp-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 26px -18px var(--shadow);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-footer a { color: var(--ink-muted); }
+.site-footer a:hover { color: var(--rust-ink); }
+
+/* --------------------------------------------------------------------------
+   Misc content-type chips (projects/gists)
+   -------------------------------------------------------------------------- */
+
+.chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .masthead-name { font-size: 24px; }
+}

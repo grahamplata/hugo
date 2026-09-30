@@ -2,7 +2,7 @@
 baseURL = "/"
 locale = "en-US"
 title = "Graham Plata"
-theme = "etch"
+theme = "genuine-parts"
 googleAnalytics = "UA-11254643-2"
 enableInlineShortcodes = true
 pygmentsCodeFences = true
@@ -15,10 +15,8 @@ staticDir = ["static"]
 # Image processing settings
 [imaging]
 resampleFilter = "lanczos"
-quality = 85
 anchor = "smart"
 bgColor = "#ffffff"
-hint = "photo"
 # Enable EXIF data processing
 exif.disableDate = false
 exif.disableLatLong = false
@@ -28,6 +26,7 @@ exif.excludeFields = "GPS"
 [imaging.formats]
 [imaging.formats.webp]
 quality = 85
+hint = "photo"
 lossless = false
 [imaging.formats.jpeg]
 quality = 85
@@ -37,9 +36,11 @@ compressionLevel = 6
 
 [params]
 author = "graham.plata@gmail.com"
-description = "Graham Plata's Digital Sandbox"
+description = "Graham Plata's home on the web"
+tagline = "Welcome to my Digital Sandbox"
 copyright = "Copyright © 2026 Graham Plata"
 dark = "auto"
+
 highlight = true
 showPageTitleInTOC = false
 
