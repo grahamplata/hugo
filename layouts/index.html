@@ -1,6 +1,5 @@
 {{ define "main" }}
 {{ .Content }}
-{{ partial "signature-illustration.html" . }}
 <h2 class="section-heading">Posts</h2>
 <div class="posts-by-year">
     {{- $posts := where site.RegularPages "Type" "posts" -}}
