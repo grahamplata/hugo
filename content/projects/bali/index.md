@@ -14,6 +14,7 @@ The first entries are retrospective until the log catches up with the current st
 
 - [Inspiration](#inspiration)
 - [The listing](#the-listing)
+- [Wiring](#wiring)
 - [Fabrication](#fabrication)
 
 ## Inspiration
@@ -21,8 +22,6 @@ The first entries are retrospective until the log catches up with the current st
 Green Rabbits.
 
 ### [Jes and Kris Clewell's Mk1 Rabbit - StanceWorks Feature](https://stanceworks.com/2015/01/jes-clewells-volkswagen-mk1-rabbit/)
-
-### [Jamie Fagan's 4 door](https://www.instagram.com/_jamiefagan_/)
 
 ### [SCI Performance's Bali Green Mk1](https://vimeo.com/6936718)
 
@@ -45,6 +44,24 @@ The previous owner had owned and restored the car himself 15 years prior, then s
 ![U-Haul](./4688.jpeg)
 
 > Can you believe they let anyone rent these?!
+
+## Wiring
+
+_Last meaningful update: Wednesday, September 17th._
+
+Andrew and I spent an evening stripping the original Mk3 harness down to just what's needed to run the ABA engine, cutting out everything tied to systems this car doesn't have. The intention is to marry the existing chassis wiring to the new fuse panel. We used seam rippers to remove the outer covering and get at the wires, and [A2 resource fuse panel reference](https://www.xjamiex.com/mk2resource/electrical/CE2.html) to chase down what each circuit actually fed.
+
+![Harness stripping](./5773.jpeg)
+
+> Removing the original loom from its wrapper
+
+![Harness stripping](./5782.jpeg)
+
+> Finished Product
+
+![Harness stripping](./5781.jpeg)
+
+> Pile of excess
 
 ## Fabrication
 
