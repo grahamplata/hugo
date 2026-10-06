@@ -71,6 +71,22 @@ The previous owner had shaved the engine bay and swapped in a set of Mercedes bu
 
 Off to a local fabricator to fill the holes left behind from that seat swap, and to finish shaving the engine bay properly. No other structural work needed  just patching. Once the floor's sorted I still need a harness bar, since the factory seatbelt mounts are gone, and I'm hunting for a set of bucket seats (leaning Recaro) to replace the Mercedes ones.
 
+![Mercedes seat pulled out](./5217.jpeg)
+
+The Mercedes seat, out of the car at last.
+
+![Stripped interior](./5213.jpeg)
+
+The interior stripped down to the floor ahead of the trip to the fabricator.
+
+![Mounting hole](./5792.jpeg)
+
+One of the holes left behind by the Mercedes seat rails.
+
+![Mounting hole near the sill](./5793.jpeg)
+
+Another one, closer to the sill, with the westi plaid door card visible above.
+
 ![Pushed out into the rain](./5828.jpeg)
 
 Getting pushed out into the rain from the garage, on the way to the fabricator.
