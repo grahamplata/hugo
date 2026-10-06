@@ -50,9 +50,9 @@ The previous owner had owned and restored the car himself 15 years prior, then s
 
 _Last meaningful update: Sunday, October 4th._
 
-The previous owner had shaved the engine bay and swapped in a set of Mercedes bucket seats as a teenager, but never finished the job — the seats were resting on offcuts of wood, and he'd removed the factory seatbelt mounts to fit them. Not exactly confidence-inspiring on the safety front.
+The previous owner had shaved the engine bay and swapped in a set of Mercedes bucket seats as a teenager, but never finished the job  the seats were resting on offcuts of wood, and he'd removed the factory seatbelt mounts to fit them. Not exactly confidence-inspiring on the safety front.
 
-Off to a local fabricator to fill the holes left behind from that seat swap, and to finish shaving the engine bay properly. No other structural work needed — just patching. Once the floor's sorted I still need a harness bar, since the factory seatbelt mounts are gone, and I'm hunting for a set of bucket seats (leaning Recaro) to replace the Mercedes ones.
+Off to a local fabricator to fill the holes left behind from that seat swap, and to finish shaving the engine bay properly. No other structural work needed  just patching. Once the floor's sorted I still need a harness bar, since the factory seatbelt mounts are gone, and I'm hunting for a set of bucket seats (leaning Recaro) to replace the Mercedes ones.
 
 ![Pushed out into the rain](./5828.jpeg)
 
