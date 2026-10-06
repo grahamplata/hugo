@@ -42,6 +42,8 @@ The previous owner Matt's vision was to make a clone of the SCI performance golf
 
 ## Fabrication
 
+_Last meaningful update: Sunday, October 4th._
+
 Off to a local fabricator to fill the holes drilled by the previous owner for the Mercedes seats, and to finish shaving the engine bay.
 
 ![Pushed out into the rain](./5828.jpeg)
