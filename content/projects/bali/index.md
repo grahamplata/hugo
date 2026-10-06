@@ -10,6 +10,12 @@ draft: false
 
 The first entries are retrospective until the log catches up with the current state of the car. Consider this a best effort build log.
 
+## Table of Contents
+
+- [Inspiration](#inspiration)
+- [The listing](#the-listing)
+- [Fabrication](#fabrication)
+
 ## Inspiration
 
 Green Rabbits.
@@ -33,3 +39,15 @@ The previous owner Matt's vision was to make a clone of the SCI performance golf
 ![U-Haul](./4688.jpeg)
 
 > Can you believe they let anyone rent these?!
+
+## Fabrication
+
+Off to a local fabricator to fill the holes drilled by the previous owner for the Mercedes seats, and to finish shaving the engine bay.
+
+![Pushed out into the rain](./5828.jpeg)
+
+Getting pushed out into the rain from the garage, on the way to the fabricator.
+
+![Loaded on the trailer](./5832.jpeg)
+
+Loaded on the trailer, ready to head out.
