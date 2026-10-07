@@ -1,7 +1,7 @@
 <header class="masthead">
   <div class="masthead-row">
     <div>
-      <h1 class="masthead-name"><a href="{{ "/" | absURL }}">{{ .Site.Title }}</a></h1>
+      {{ if .IsHome }}<h1 class="masthead-name"><a href="{{ "/" | absURL }}">{{ .Site.Title }}</a></h1>{{ else }}<p class="masthead-name"><a href="{{ "/" | absURL }}">{{ .Site.Title }}</a></p>{{ end }}
       {{ with .Site.Params.tagline }}<p class="masthead-role">{{ . }}</p>{{ end }}
     </div>
     {{ partial "theme-toggle.html" . }}
