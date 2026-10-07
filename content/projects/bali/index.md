@@ -3,7 +3,7 @@ title: "Bali-ish Green Rabbit"
 author: "Graham Plata"
 date: 2026-07-18
 type: "car"
-description: "Code L62A"
+description: "L62A"
 tags: ["volkswagen", "automotive"]
 draft: false
 ---
@@ -37,7 +37,7 @@ The previous owner's vision was to make a clone of the SCI performance golf. It 
 >
 > &mdash; original listing text
 
-The previous owner had owned and restored the car himself 15 years prior, then spent years slowly working toward the diesel-to-gas conversion and the SCI clone build before deciding to sell. The ABA motor was sitting in the bay, unwired, when I picked it up.
+The previous owner had owned and modified the car himself 13 years prior, then coverted the car from diesel-to-gas. His goal was make an homage to the SCI build before deciding to sell. The ABA motor was sitting in the bay, unwired, when I picked it up.
 
 ![First Sight](./4686.jpeg)
 
