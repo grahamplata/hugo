@@ -535,8 +535,8 @@ ul.parts-list {
    hidden TO that resting state, so prefers-reduced-motion (animation:
    none) simply shows the finished figure with no extra rules. */
 .gp-illustration .gp-part { animation: gp-fade 0.3s ease 0.05s both; }
-.gp-illustration .gp-callout-rust { animation: gp-fade 0.25s ease 0.35s both; }
-.gp-illustration .gp-callout-cobalt { animation: gp-fade 0.25s ease 0.45s both; }
+.gp-illustration .gp-callout-rust { animation: gp-fade 0.45s ease 0.35s both; }
+.gp-illustration .gp-callout-cobalt { animation: gp-fade 0.65s ease 0.65s both; }
 
 @keyframes gp-fade {
   from { opacity: 0; }
