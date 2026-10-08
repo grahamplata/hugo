@@ -519,6 +519,35 @@ ul.parts-list {
 }
 
 /* --------------------------------------------------------------------------
+   Signature illustration
+   -------------------------------------------------------------------------- */
+
+.signature {
+  margin: clamp(32px, 6vw, 56px) auto 8px;
+  max-width: 480px;
+}
+
+.signature svg { display: block; width: 100%; height: auto; }
+
+.gp-illustration { color: var(--ink); }
+
+/* Base attributes ARE the resting state; the keyframe animates FROM
+   hidden TO that resting state, so prefers-reduced-motion (animation:
+   none) simply shows the finished figure with no extra rules. */
+.gp-illustration .gp-part { animation: gp-fade 0.3s ease 0.05s both; }
+.gp-illustration .gp-callout-rust { animation: gp-fade 0.25s ease 0.35s both; }
+.gp-illustration .gp-callout-cobalt { animation: gp-fade 0.25s ease 0.45s both; }
+
+@keyframes gp-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gp-illustration .gp-part { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
    Bio card / about
    -------------------------------------------------------------------------- */
 
