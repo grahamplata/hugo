@@ -523,7 +523,7 @@ ul.parts-list {
    -------------------------------------------------------------------------- */
 
 .signature {
-  margin: clamp(32px, 6vw, 56px) auto 8px;
+  margin: clamp(16px, 3vw, 28px) auto 8px;
   max-width: 480px;
 }
 
