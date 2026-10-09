@@ -531,20 +531,59 @@ ul.parts-list {
 
 .gp-illustration { color: var(--ink); }
 
-/* Base attributes ARE the resting state; the keyframe animates FROM
-   hidden TO that resting state, so prefers-reduced-motion (animation:
-   none) simply shows the finished figure with no extra rules. */
+/* The reveal stages like a technical drawing being plotted: frame marks
+   first, then the subject, then each annotation in drafting order. Base
+   attributes ARE the resting state; keyframes animate FROM hidden TO that
+   resting state, so prefers-reduced-motion (animation: none) simply shows
+   the finished figure with no extra rules. */
 .gp-illustration .gp-part { animation: gp-fade 0.3s ease 0.05s both; }
-.gp-illustration .gp-callout-rust { animation: gp-fade 0.45s ease 0.35s both; }
-.gp-illustration .gp-callout-cobalt { animation: gp-fade 0.65s ease 0.65s both; }
+
+.gp-illustration .gp-frame { animation: gp-fade 0.15s ease-out 0s both; }
+.gp-illustration .gp-subject { animation: gp-rise 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both; }
+.gp-illustration .gp-chassis-label { animation: gp-fade 0.2s ease-out 0.35s both; }
+
+.gp-illustration .gp-tick-wheelbase { animation: gp-fade 0.15s ease-out 0.4s both; }
+.gp-illustration .gp-draw-wheelbase { stroke-dasharray: 1; animation: gp-draw 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+.gp-illustration .gp-label-wheelbase { animation: gp-fade 0.15s ease-out 0.7s both; }
+
+.gp-illustration .gp-tick-height { animation: gp-fade 0.15s ease-out 0.45s both; }
+.gp-illustration .gp-draw-height { stroke-dasharray: 1; animation: gp-draw 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both; }
+.gp-illustration .gp-label-height { animation: gp-fade 0.15s ease-out 0.75s both; }
+
+.gp-illustration .gp-stamp-box { animation: gp-fade 0.2s ease-out 0.8s both; }
+.gp-illustration .gp-stamp-text { animation: gp-fade 0.15s ease-out 0.95s both; }
+
+.gp-illustration .gp-year-label { animation: gp-fade 0.15s ease-out 1.05s both; }
 
 @keyframes gp-fade {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+@keyframes gp-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gp-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .gp-illustration .gp-part { animation: none; }
+  .gp-illustration .gp-part,
+  .gp-illustration .gp-frame,
+  .gp-illustration .gp-subject,
+  .gp-illustration .gp-chassis-label,
+  .gp-illustration .gp-tick-wheelbase,
+  .gp-illustration .gp-draw-wheelbase,
+  .gp-illustration .gp-label-wheelbase,
+  .gp-illustration .gp-tick-height,
+  .gp-illustration .gp-draw-height,
+  .gp-illustration .gp-label-height,
+  .gp-illustration .gp-stamp-box,
+  .gp-illustration .gp-stamp-text,
+  .gp-illustration .gp-year-label { animation: none; }
 }
 
 /* --------------------------------------------------------------------------
