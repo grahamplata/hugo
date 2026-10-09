@@ -10,9 +10,9 @@ draft: false
 
 ## Overview
 
-{{< figure src="cluster.png" alt="DigiFiz digital dashboard" caption="The iconic DigiFiz design, recreated in software" >}}
+{{< figure src="cluster.png" alt="DigiFiz digital dashboard" caption="The iconic DigiFiz design, recreated in software" width="800" height="346" loading="eager" >}}
 
-An open-source homage to the legendary VW DigiFiz—the factory-optional all-digital instrument cluster for Golf MK2 and Jetta MK2 (1986–1992). It brings cutting-edge ’80s futurism to modern vehicles.
+An open-source homage to the legendary VW DigiFiz—the factory-optional all-digital instrument cluster for Golf MK2 and Jetta MK2 (1986–1992). It brings that distinctive ’80s futurism to modern vehicles.
 
 ## The Story
 
@@ -88,7 +88,7 @@ Each implementation handles its own protocol. Swap input modes via CLI flags wit
 
 Scenes (`internal/scene/scene.go`) implement a clean lifecycle:
 
-```go
+```text
 OnEnter(ctx) → Update() → Draw() → OnExit()
 ```
 
