@@ -79,5 +79,12 @@ title = "gists"
 url = "/gists/"
 weight = 40
 
+[[menu.main]]
+identifier = "recipes"
+name = "recipes"
+title = "recipes"
+url = "/recipes/"
+weight = 50
+
 [permalinks]
 posts = "/posts/:title/"
