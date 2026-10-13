@@ -208,6 +208,10 @@ p { margin: 0 0 1.1em; }
 }
 
 .masthead-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   font-size: 30px;
   margin: 0;
 }
